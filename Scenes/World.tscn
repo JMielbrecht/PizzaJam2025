@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://cgehjnd4s4njj"]
+
+[ext_resource type="PackedScene" uid="uid://bxx0rssmb5nc1" path="res://Player3D.tscn" id="1_c6gwx"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
+
+[sub_resource type="Sky" id="Sky_2dftf"]
+sky_material = SubResource("PhysicalSkyMaterial_c6gwx")
+
+[sub_resource type="Environment" id="Environment_c6gwx"]
+background_mode = 2
+sky = SubResource("Sky_2dftf")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cmany"]
+size = Vector2(200, 200)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmany"]
+albedo_color = Color(0, 0, 0.176471, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c6gwx"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c6gwx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.40174, 0.915754, 0, -0.915754, 0.40174, 0, 31.2035, 0)
+light_energy = 6.83
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_cmany")
+surface_material_override/0 = SubResource("StandardMaterial3D_cmany")
+
+[node name="Player3D" parent="." instance=ExtResource("1_c6gwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.017, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.45495, 0, 0, 0, 6.45495, 0, 0, 0, 6.45495, 20.1034, 3.01361, 28.4699)
+mesh = SubResource("BoxMesh_c6gwx")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.45495, 0, 0, 0, 6.45495, 0, 0, 0, 6.45495, -28.7467, 3.01361, 14.1659)
+mesh = SubResource("BoxMesh_c6gwx")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.45495, 0, 0, 0, 6.45495, 0, 0, 0, 6.45495, 25.3045, 3.01361, -11.9353)
+mesh = SubResource("BoxMesh_c6gwx")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.45495, 0, 0, 0, 6.45495, 0, 0, 0, 6.45495, -17.8606, 3.0136, -29.8772)
+mesh = SubResource("BoxMesh_c6gwx")

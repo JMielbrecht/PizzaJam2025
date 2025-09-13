@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0wn64b4t6kfn"]
+
+[ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
+[ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
+
+[sub_resource type="Sky" id="Sky_2dftf"]
+sky_material = SubResource("PhysicalSkyMaterial_c6gwx")
+
+[sub_resource type="Environment" id="Environment_c6gwx"]
+background_mode = 2
+sky = SubResource("Sky_2dftf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcbcq"]
+albedo_color = Color(0, 0, 0.356863, 1)
+albedo_texture = ExtResource("1_2dftf")
+uv1_scale = Vector3(30, 30, 30)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cmany"]
+material = SubResource("StandardMaterial3D_bcbcq")
+size = Vector2(200, 200)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2dftf"]
+size = Vector3(200, 0.1, 200)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c6gwx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bcbcq"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c6gwx")
+
+[node name="Node3D" type="Node3D" parent="WorldEnvironment"]
+transform = Transform3D(0.288196, 0, -0.957571, 0, 1, 0, 0.957571, 0, 0.288196, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment/Node3D"]
+transform = Transform3D(0.760927, 0.648541, -0.0196108, 0, 0.0302245, 0.999543, 0.648837, -0.76058, 0.0229986, -21.4019, 31.2035, 27.0199)
+light_energy = 4.648
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="WorldEnvironment/Node3D"]
+transform = Transform3D(0.760927, 0.593207, -0.262861, 0, 0.405126, 0.914261, 0.648837, -0.695686, 0.308271, 21.4019, 20.6974, -23.1785)
+
+[node name="Player3D" parent="." instance=ExtResource("1_c6gwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0770369, 1.11207, -0.105683)
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_cmany")
+
+[node name="Area3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/Area3D"]
+shape = SubResource("BoxShape3D_2dftf")
+
+[node name="Buildings" type="Node" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(6.45495, 0, 0, 0, 6.45495, 0, 0, 0, 6.45495, -18.4189, 3.01361, 13.9375)
+mesh = SubResource("BoxMesh_c6gwx")
+skeleton = NodePath("../../root/@EditorNode@21281/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11491/@VSplitContainer@11143/@HSplitContainer@11145/@HSplitContainer@11147/@Control@11148/@SubViewportContainer@11149/@SubViewport@11150/Node3D")
+
+[node name="Area3D" type="StaticBody3D" parent="Buildings/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/MeshInstance3D2/Area3D"]
+shape = SubResource("BoxShape3D_bcbcq")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(6.45495, 0, 0, 0, 6.45495, 0, 0, 0, 6.45495, 15.7237, 3.01361, 13.9375)
+mesh = SubResource("BoxMesh_c6gwx")
+skeleton = NodePath("../../root/@EditorNode@21281/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11491/@VSplitContainer@11143/@HSplitContainer@11145/@HSplitContainer@11147/@Control@11148/@SubViewportContainer@11149/@SubViewport@11150/Node3D")
+
+[node name="Area3D" type="StaticBody3D" parent="Buildings/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/MeshInstance3D4/Area3D"]
+shape = SubResource("BoxShape3D_bcbcq")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(6.45495, 0, 0, 0, 6.45495, 0, 0, 0, 6.45495, 15.7237, 3.01361, -14.3401)
+mesh = SubResource("BoxMesh_c6gwx")
+skeleton = NodePath("../../root/@EditorNode@21281/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11491/@VSplitContainer@11143/@HSplitContainer@11145/@HSplitContainer@11147/@Control@11148/@SubViewportContainer@11149/@SubViewport@11150/Node3D")
+
+[node name="Area3D" type="StaticBody3D" parent="Buildings/MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/MeshInstance3D5/Area3D"]
+shape = SubResource("BoxShape3D_bcbcq")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(6.45495, 0, 0, 0, 6.45495, 0, 0, 0, 6.45495, -18.4189, 3.01361, -13.8852)
+mesh = SubResource("BoxMesh_c6gwx")
+skeleton = NodePath("../../root/@EditorNode@21281/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11491/@VSplitContainer@11143/@HSplitContainer@11145/@HSplitContainer@11147/@Control@11148/@SubViewportContainer@11149/@SubViewport@11150/Node3D")
+
+[node name="Area3D" type="StaticBody3D" parent="Buildings/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/MeshInstance3D3/Area3D"]
+shape = SubResource("BoxShape3D_bcbcq")
