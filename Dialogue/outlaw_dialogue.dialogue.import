@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dh76xhc3kukk2"
+path="res://.godot/imported/outlaw_dialogue.dialogue-9ee1dce8c4f2afbb329bf4559baa6399.tres"
+
+[deps]
+
+source_file="res://Dialogue/outlaw_dialogue.dialogue"
+dest_files=["res://.godot/imported/outlaw_dialogue.dialogue-9ee1dce8c4f2afbb329bf4559baa6399.tres"]
+
+[params]
+
+defaults=true
