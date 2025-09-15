@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c88q02kpnmkkg"]
+
+[ext_resource type="Script" uid="uid://dktk7h0kbdvdh" path="res://Scenes/target.gd" id="1_3saft"]
+
+[node name="TargetBox" type="Area3D"]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_3saft")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

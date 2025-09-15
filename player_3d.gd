@@ -9,6 +9,9 @@ extends CharacterBody3D
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
 
+var bullet_inst = load("res://Scenes/bullet_3d.tscn")
+@onready var bullet_spawn_pos = %BulletSpawnPoint
+
 var mouse_input: bool = false
 var mouse_rotation : Vector3
 var rotation_input : float
@@ -24,7 +27,7 @@ func _unhandled_input(event):
 	if mouse_input:
 		rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		tilt_input = -event.relative.y * MOUSE_SENSITIVITY
-		print(Vector2(rotation_input, tilt_input))
+		#print(Vector2(rotation_input, tilt_input))
 	
 
 func _update_camera(delta):
@@ -52,6 +55,9 @@ func _ready():
 
 
 func _physics_process(delta):
+	
+	
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -72,8 +78,19 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
-
+	
 	move_and_slide()
+	
+	
+	
+	if Input.is_action_just_pressed("shoot"):
+		var inst = bullet_inst.instantiate()
+		inst.position = bullet_spawn_pos.global_position
+		inst.transform.basis = bullet_spawn_pos.global_transform.basis
+		get_parent().add_child(inst)
+	
+	
+	
 	
 	
 	

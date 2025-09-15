@@ -1,8 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=26 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://cn3afkijffu7u" path="res://Images/Lady of the Night.PNG" id="3_bcbcq"]
+[ext_resource type="PackedScene" uid="uid://t24qcbs5ndjw" path="res://Scenes/HUG.tscn" id="4_js7pq"]
+[ext_resource type="PackedScene" uid="uid://c88q02kpnmkkg" path="res://Scenes/Target.tscn" id="5_eu7l1"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -72,6 +74,9 @@ size = Vector3(30, 0.5, 10)
 [sub_resource type="BoxMesh" id="BoxMesh_js7pq"]
 size = Vector3(11.91, 1, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_eu7l1"]
+size = Vector3(5.75537, 3.38354, 2.89697)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -112,7 +117,7 @@ skeleton = NodePath("../../root/@EditorNode@21281/@Panel@14/@VBoxContainer@15/Do
 shape = SubResource("BoxShape3D_bcbcq")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Buildings"]
-transform = Transform3D(-0.991635, 0, 6.37833, 0, 6.45495, 0, -6.37833, 0, -0.991635, 17.1315, 2.2248, -19.0242)
+transform = Transform3D(-0.991635, 0, 6.37833, 0, 6.45495, 0, -6.37833, 0, -0.991635, 17.1315, 2.2248, -18.7715)
 mesh = SubResource("BoxMesh_c6gwx")
 skeleton = NodePath("../../root/@EditorNode@21281/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11491/@VSplitContainer@11143/@HSplitContainer@11145/@HSplitContainer@11147/@Control@11148/@SubViewportContainer@11149/@SubViewport@11150/Node3D")
 
@@ -453,6 +458,15 @@ mesh = SubResource("BoxMesh_bcbcq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350782, 5.26484, 80.5509)
 mesh = SubResource("BoxMesh_js7pq")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Ms Lady" type="Sprite3D" parent="."]
 transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, -12.4107, 1.22031, -140.143)
 texture = ExtResource("3_bcbcq")
+
+[node name="HUD" parent="." instance=ExtResource("4_js7pq")]
+
+[node name="TargetBox" parent="." instance=ExtResource("5_eu7l1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5746, 1.99199, -140.329)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32023, 0.037343, 5.92157)
+shape = SubResource("BoxShape3D_eu7l1")
