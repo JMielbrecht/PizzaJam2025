@@ -8,12 +8,12 @@ extends CharacterBody3D
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
+@onready var ray_cast_3d = $RayCast3D
 
 var mouse_input: bool = false
 var mouse_rotation : Vector3
 var rotation_input : float
 var tilt_input : float
-
 var player_rotation : Vector3
 var camera_rotation : Vector3
 
@@ -39,6 +39,13 @@ func _update_camera(delta):
 	
 	CAMERA_CONTROLLER.transform.basis = Basis.from_euler(camera_rotation)
 	CAMERA_CONTROLLER.rotation.z = 0.0
+	# Turn raycast towards movement direction
+	if $RayCast3D:
+		var camera_global_transform = CAMERA_CONTROLLER.global_transform
+		var raycast_origin = camera_global_transform.origin
+		var raycast_target = raycast_origin + camera_global_transform.basis.z * -2.0 # forward in -Z
+		$RayCast3D.global_position = raycast_origin
+		$RayCast3D.target_position = raycast_target - raycast_origin  # Set local target direction
 	
 	global_transform.basis = Basis.from_euler(player_rotation)
 	
