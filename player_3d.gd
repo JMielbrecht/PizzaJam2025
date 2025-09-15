@@ -17,6 +17,7 @@ var tilt_input : float
 var player_rotation : Vector3
 var camera_rotation : Vector3
 
+var can_move : bool = true
 
 func _unhandled_input(event):
 	mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
@@ -47,7 +48,11 @@ func _update_camera(delta):
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-
+func _input(event):
+	if(can_move):
+		if event.is_action_pressed("ui_interact"):
+			print("This should interact with something like an NPC. But I need to make the RayCast3D")
+			# var target = ray_cast_3d.get_collider()
 
 
 

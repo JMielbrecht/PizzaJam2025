@@ -2,7 +2,7 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ugw53"]
 
-[node name="Dialogue" type="Control"]
+[node name="DialogueUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
