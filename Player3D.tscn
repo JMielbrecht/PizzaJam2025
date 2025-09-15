@@ -37,3 +37,4 @@ current = true
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(0.0183513, 0.165073, 0.986111, -0.0256962, 0.986029, -0.164581, -0.999501, -0.022319, 0.0223367, 0.00589448, 1.11317, -0.0437815)
 target_position = Vector3(2, 0, 0)
+collide_with_areas = true
