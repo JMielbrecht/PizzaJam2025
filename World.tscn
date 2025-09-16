@@ -89,7 +89,7 @@ light_energy = 4.648
 transform = Transform3D(0.760927, 0.593207, -0.262861, 0, 0.405126, 0.914261, 0.648837, -0.695686, 0.308271, 21.4019, 20.6974, -23.1785)
 
 [node name="Player3D" parent="." instance=ExtResource("1_c6gwx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.81555, 1.11207, -125.202)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80665, 1.20986, -125.139)
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.2742, 0, -147.228)

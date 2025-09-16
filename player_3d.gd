@@ -26,6 +26,14 @@ func _unhandled_input(event):
 		rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		tilt_input = -event.relative.y * MOUSE_SENSITIVITY
 		print(Vector2(rotation_input, tilt_input))
+		
+	elif event.is_action_pressed("ui_interact"):
+		# This is just a test. Press "E" anywhere.
+		print("Mistress talking")
+		var resource = load("res://Dialogue/mistress_dialogue.dialogue")
+		var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
+		DialogueManager.show_dialogue_balloon(resource)
+		
 	
 
 func _update_camera(delta):
@@ -55,11 +63,6 @@ func _update_camera(delta):
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _input(event):
-	if(can_move):
-		if event.is_action_pressed("ui_interact"):
-			print("This should interact with something like an NPC. But I need to make the RayCast3D")
-			# var target = ray_cast_3d.get_collider()
 
 
 

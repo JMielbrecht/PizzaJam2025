@@ -3,3 +3,4 @@ Mayor: <greeting>
 Mayor: <Complaint about plant not getting enough light>
 ~ after_help
 	Mayor: <gratitude for helping out, maybe something else>
+=> END
