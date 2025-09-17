@@ -1,0 +1,6 @@
+~ start
+Undertaker: <greeting>
+Undertaker: <Complaint about dog digging holes>
+~ after_help
+	Undertaker: <gratitude for helping out, maybe something else>
+=> END

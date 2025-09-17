@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://6fhssqpb848r"
+path="res://.godot/imported/undertaker_dialogue.dialogue-ff85f90da855fdbb90c8dbbd57338748.tres"
+
+[deps]
+
+source_file="res://Dialogue/undertaker_dialogue.dialogue"
+dest_files=["res://.godot/imported/undertaker_dialogue.dialogue-ff85f90da855fdbb90c8dbbd57338748.tres"]
+
+[params]
+
+defaults=true

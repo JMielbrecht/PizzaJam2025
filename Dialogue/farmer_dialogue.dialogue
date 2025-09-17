@@ -1,0 +1,6 @@
+~ start
+Farmer: <greeting>
+Farmer: <Some explanation about how the crows need to be scared away>
+~ after_help
+	Farmer: <gratitude for helping out, maybe something else>
+=> END
