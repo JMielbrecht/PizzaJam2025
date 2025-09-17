@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=25 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://cn3afkijffu7u" path="res://Images/Lady of the Night.PNG" id="3_bcbcq"]
+[ext_resource type="Script" uid="uid://b5wb5gnw6fvi1" path="res://Scripts/NPC_Scripts/npc.gd" id="3_js7pq"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -71,6 +72,9 @@ size = Vector3(30, 0.5, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_js7pq"]
 size = Vector3(11.91, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_js7pq"]
+size = Vector3(1.641, 1.39527, 1.9649)
 
 [node name="Node3D" type="Node3D"]
 
@@ -453,6 +457,23 @@ mesh = SubResource("BoxMesh_bcbcq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350782, 5.26484, 80.5509)
 mesh = SubResource("BoxMesh_js7pq")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="NPC" type="Node3D" parent="."]
+script = ExtResource("3_js7pq")
+
+[node name="Sprite3D" type="Sprite3D" parent="NPC"]
 transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, -12.4107, 1.22031, -140.143)
 texture = ExtResource("3_bcbcq")
+
+[node name="Area3D" type="Area3D" parent="NPC"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC/Area3D"]
+transform = Transform3D(1.93049, 0, 0.522694, 0, 2, 0, -0.522694, 0, 1.93049, -12.5461, 1.31782, -140.509)
+shape = SubResource("BoxShape3D_js7pq")
+debug_color = Color(0.0901961, 0.517647, 0.670588, 0.713726)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InteractionPrompt" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Press \"E\" to Interact"
