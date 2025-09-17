@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=24 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://cn3afkijffu7u" path="res://Images/Lady of the Night.PNG" id="3_bcbcq"]
+[ext_resource type="Script" uid="uid://b38pupy5b1t7f" path="res://Scripts/NPC_Scripts/mistress.gd" id="4_js7pq"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -88,7 +89,7 @@ light_energy = 4.648
 transform = Transform3D(0.760927, 0.593207, -0.262861, 0, 0.405126, 0.914261, 0.648837, -0.695686, 0.308271, 21.4019, 20.6974, -23.1785)
 
 [node name="Player3D" parent="." instance=ExtResource("1_c6gwx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.81555, 1.11207, -125.202)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80665, 1.20986, -125.139)
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.2742, 0, -147.228)
@@ -456,3 +457,4 @@ mesh = SubResource("BoxMesh_js7pq")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, -12.4107, 1.22031, -140.143)
 texture = ExtResource("3_bcbcq")
+script = ExtResource("4_js7pq")
