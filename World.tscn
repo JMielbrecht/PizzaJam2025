@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=27 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://cn3afkijffu7u" path="res://Images/Lady of the Night.PNG" id="3_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://t24qcbs5ndjw" path="res://Scenes/HUG.tscn" id="4_js7pq"]
 [ext_resource type="PackedScene" uid="uid://c88q02kpnmkkg" path="res://Scenes/Target.tscn" id="5_eu7l1"]
+[ext_resource type="PackedScene" uid="uid://8nfxae8e1qv0" path="res://Scenes/Parry.tscn" id="6_p1v5b"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -14,6 +15,7 @@ sky_material = SubResource("PhysicalSkyMaterial_c6gwx")
 [sub_resource type="Environment" id="Environment_c6gwx"]
 background_mode = 2
 sky = SubResource("Sky_2dftf")
+fog_enabled = true
 fog_light_color = Color(0, 0.0332184, 0.0754872, 1)
 fog_light_energy = 3.7
 fog_density = 0.1069
@@ -92,8 +94,9 @@ light_energy = 4.648
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="WorldEnvironment/Node3D"]
 transform = Transform3D(0.760927, 0.593207, -0.262861, 0, 0.405126, 0.914261, 0.648837, -0.695686, 0.308271, 21.4019, 20.6974, -23.1785)
 
-[node name="Player3D" parent="." instance=ExtResource("1_c6gwx")]
+[node name="Player3D" parent="." node_paths=PackedStringArray("HUD") instance=ExtResource("1_c6gwx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.81555, 1.11207, -125.202)
+HUD = NodePath("../HUD")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.2742, 0, -147.228)
@@ -470,3 +473,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5746, 1.99199, -140.329)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32023, 0.037343, 5.92157)
 shape = SubResource("BoxShape3D_eu7l1")
+
+[node name="Parry3D" parent="." instance=ExtResource("6_p1v5b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62661, 0.255247, -132.53)

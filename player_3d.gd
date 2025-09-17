@@ -9,8 +9,12 @@ extends CharacterBody3D
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
 
+@export var HUD : Control
+
 var bullet_inst = load("res://Scenes/bullet_3d.tscn")
 @onready var bullet_spawn_pos = %BulletSpawnPoint
+
+
 
 var mouse_input: bool = false
 var mouse_rotation : Vector3
@@ -19,6 +23,9 @@ var tilt_input : float
 
 var player_rotation : Vector3
 var camera_rotation : Vector3
+
+var chamber: int = 6
+@onready var chamber_label = HUD.get_node("ChamberCount")
 
 
 func _unhandled_input(event):
@@ -82,12 +89,20 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	
+	if chamber > 0:
+		if Input.is_action_just_pressed("shoot"):
+			var inst = bullet_inst.instantiate()
+			inst.position = bullet_spawn_pos.global_position
+			inst.transform.basis = bullet_spawn_pos.global_transform.basis
+			get_parent().add_child(inst)
+			
+			chamber -= 1
+			chamber_label.text = str(chamber)
 	
-	if Input.is_action_just_pressed("shoot"):
-		var inst = bullet_inst.instantiate()
-		inst.position = bullet_spawn_pos.global_position
-		inst.transform.basis = bullet_spawn_pos.global_transform.basis
-		get_parent().add_child(inst)
+	else:
+		if Input.is_action_just_pressed("reload"):
+			chamber = 6
+			chamber_label.text = str(chamber)
 	
 	
 	
@@ -97,4 +112,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 	
