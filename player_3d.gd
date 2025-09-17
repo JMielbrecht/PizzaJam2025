@@ -16,6 +16,7 @@ var rotation_input : float
 var tilt_input : float
 var player_rotation : Vector3
 var camera_rotation : Vector3
+var current_interactable: Node = null
 
 var can_move : bool = true
 
@@ -27,14 +28,16 @@ func _unhandled_input(event):
 		tilt_input = -event.relative.y * MOUSE_SENSITIVITY
 		print(Vector2(rotation_input, tilt_input))
 		
-	elif event.is_action_pressed("ui_interact"):
-		# This is just a test. Press "E" anywhere.
-		print("Mistress talking")
-		var resource = load("res://Dialogue/mistress_dialogue.dialogue")
-		var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
-		DialogueManager.show_dialogue_balloon(resource)
-		
-	
+	elif event.is_action_just_pressed("ui_interact"):
+		if current_interactable:
+			# Show HUD or 3D prompt
+			current_interactable.show_interact_prompt(true)
+			current_interactable.start_dialog()
+			# This is just a test. Press "E" anywhere.
+			print("Mistress talking")
+			var resource = load("res://Dialogue/mistress_dialogue.dialogue")
+			var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
+			DialogueManager.show_dialogue_balloon(resource)
 
 func _update_camera(delta):
 	
