@@ -467,3 +467,11 @@ script = ExtResource("4_js7pq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D"]
 shape = SubResource("BoxShape3D_js7pq")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="InteractionLabel" type="Label" parent="HUD"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Press \"E\" to Interact"

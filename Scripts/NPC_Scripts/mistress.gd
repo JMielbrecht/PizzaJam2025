@@ -12,3 +12,8 @@ func start_dialog():
 	
 	# then
 	
+
+			#print("Mistress talking")
+			#var resource = load("res://Dialogue/mistress_dialogue.dialogue")
+			#var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
+			#DialogueManager.show_dialogue_balloon(resource)

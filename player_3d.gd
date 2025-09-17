@@ -17,12 +17,21 @@ var tilt_input : float
 var player_rotation : Vector3
 var camera_rotation : Vector3
 var current_interactable: Node = null
+@onready var hud_label: Label = $HUD/InteractLabel
 
 var can_move : bool = true
 
 func _unhandled_input(event):
 	mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	
+	if current_interactable:
+		hud_label.text = "Press E to Interact"
+		hud_label.visible = true
+		# Show HUD or 3D prompt
+		current_interactable.show_interact_prompt(true)
+	else:
+		hud_label.visible = false
+		
 	if mouse_input:
 		rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		tilt_input = -event.relative.y * MOUSE_SENSITIVITY
@@ -30,14 +39,8 @@ func _unhandled_input(event):
 		
 	elif event.is_action_just_pressed("ui_interact"):
 		if current_interactable:
-			# Show HUD or 3D prompt
-			current_interactable.show_interact_prompt(true)
-			current_interactable.start_dialog()
 			# This is just a test. Press "E" anywhere.
-			print("Mistress talking")
-			var resource = load("res://Dialogue/mistress_dialogue.dialogue")
-			var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
-			DialogueManager.show_dialogue_balloon(resource)
+			current_interactable.start_dialog()
 
 func _update_camera(delta):
 	
