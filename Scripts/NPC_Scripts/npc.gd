@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var interact_label_path: NodePath  # Optional, for UI prompt
+@export var interact_label: Label  # Optional, for UI prompt
 var player_in_range = false
 var player_node = null
 
@@ -10,26 +10,29 @@ func _ready():
 
 func _on_body_entered(body):
 	print("entered")
-	if body.name == "Player":  # Or check with body.is_in_group("player")
+	if body.name == "Player3D":  # Or check with body.is_in_group("player")
+		print("interactable!!!")
+		body.current_interactable = self
 		player_in_range = true
 		player_node = body
-		var label = get_node_or_null(interact_label_path)
-		if label:
-			label.visible = true
+		if interact_label:
+			interact_label.visible = true
 
 func _on_body_exited(body):
 	print("exited")
 	if body.name == "Player":
 		player_in_range = false
 		player_node = null
-		var label = get_node_or_null(interact_label_path)
-		if label:
-			label.visible = false
+		if interact_label:
+			interact_label.visible = false
 
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("ui_interact"):
-		interact()
+		start_dialog()
 
-func interact():
-	print("Interacting with NPC: ", name)
-	# Replace this with whatever interaction you want — dialogue, quest, etc.
+func start_dialog():
+	var mistress = get_child(0)  # <-- Mistress.gd is on the parent Sprite3D
+	print(mistress)
+	if mistress and mistress.has_method("start_dialog"):
+		print("start the dialogue?")
+		mistress.start_dialog()

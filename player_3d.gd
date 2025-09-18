@@ -17,7 +17,8 @@ var tilt_input : float
 var player_rotation : Vector3
 var camera_rotation : Vector3
 var current_interactable: Node = null
-@onready var hud_label: Label = $HUD/InteractLabel
+@onready var hud: Node = $HUD
+@export var hud_label: Label
 
 var can_move : bool = true
 
@@ -28,17 +29,17 @@ func _unhandled_input(event):
 		hud_label.text = "Press E to Interact"
 		hud_label.visible = true
 		# Show HUD or 3D prompt
-		current_interactable.show_interact_prompt(true)
+		#current_interactable.show_interact_prompt()
 	else:
 		hud_label.visible = false
 		
 	if mouse_input:
 		rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		tilt_input = -event.relative.y * MOUSE_SENSITIVITY
-		print(Vector2(rotation_input, tilt_input))
 		
-	elif event.is_action_just_pressed("ui_interact"):
+	elif Input.is_action_just_pressed("ui_interact"):
 		if current_interactable:
+			print("Should start dialogue")
 			# This is just a test. Press "E" anywhere.
 			current_interactable.start_dialog()
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=26 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://cn3afkijffu7u" path="res://Images/Lady of the Night.PNG" id="3_bcbcq"]
 [ext_resource type="Script" uid="uid://b38pupy5b1t7f" path="res://Scripts/NPC_Scripts/mistress.gd" id="4_js7pq"]
+[ext_resource type="Script" uid="uid://b5wb5gnw6fvi1" path="res://Scripts/NPC_Scripts/npc.gd" id="5_eu7l1"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -74,6 +75,7 @@ size = Vector3(30, 0.5, 10)
 size = Vector3(11.91, 1, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_js7pq"]
+size = Vector3(5.06845, 2.62183, 4.63348)
 
 [node name="Node3D" type="Node3D"]
 
@@ -90,8 +92,9 @@ light_energy = 4.648
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="WorldEnvironment/Node3D"]
 transform = Transform3D(0.760927, 0.593207, -0.262861, 0, 0.405126, 0.914261, 0.648837, -0.695686, 0.308271, 21.4019, 20.6974, -23.1785)
 
-[node name="Player3D" parent="." instance=ExtResource("1_c6gwx")]
+[node name="Player3D" parent="." node_paths=PackedStringArray("hud_label") instance=ExtResource("1_c6gwx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80665, 1.20986, -125.139)
+hud_label = NodePath("../HUD/InteractionLabel")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.2742, 0, -147.228)
@@ -456,22 +459,33 @@ mesh = SubResource("BoxMesh_bcbcq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350782, 5.26484, 80.5509)
 mesh = SubResource("BoxMesh_js7pq")
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Lady_NPC" type="Node3D" parent="." node_paths=PackedStringArray("interact_label")]
+script = ExtResource("5_eu7l1")
+interact_label = NodePath("../HUD/InteractionLabel")
 
-[node name="Sprite3D" type="Sprite3D" parent="Node3D"]
+[node name="Sprite3D" type="Sprite3D" parent="Lady_NPC"]
 transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, -12.4107, 1.22031, -140.143)
 texture = ExtResource("3_bcbcq")
 script = ExtResource("4_js7pq")
 
-[node name="Area3D" type="Area3D" parent="Node3D"]
+[node name="Area3D" type="Area3D" parent="Lady_NPC"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lady_NPC/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1249, 1.2327, -139.686)
 shape = SubResource("BoxShape3D_js7pq")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="InteractionLabel" type="Label" parent="HUD"]
 visible = false
-offset_right = 40.0
-offset_bottom = 23.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -23.0
+offset_right = 77.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Press \"E\" to Interact"

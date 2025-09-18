@@ -3,17 +3,14 @@ extends Sprite3D
 func start_dialog():
 	print("Mistress talking")
 	var resource = load("res://Dialogue/mistress_dialogue.dialogue")
-	var finishedTask = $GlobalData.mistress_task_complete
+	var finishedTask = GlobalData.mistress_task_complete
 	var dialogue_line 
 	if (finishedTask):
+		print("Talking after help")
 		dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "after_help")
 	else:
+		print("Talking before help")
 		dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
 	
 	# then
-	
-
-			#print("Mistress talking")
-			#var resource = load("res://Dialogue/mistress_dialogue.dialogue")
-			#var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
-			#DialogueManager.show_dialogue_balloon(resource)
+	DialogueManager.show_dialogue_balloon(resource)
