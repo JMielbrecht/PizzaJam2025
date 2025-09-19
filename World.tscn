@@ -1,10 +1,14 @@
-[gd_scene load_steps=26 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=30 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://cn3afkijffu7u" path="res://Images/Lady of the Night.PNG" id="3_bcbcq"]
 [ext_resource type="Script" uid="uid://b38pupy5b1t7f" path="res://Scripts/NPC_Scripts/mistress.gd" id="4_js7pq"]
 [ext_resource type="Script" uid="uid://b5wb5gnw6fvi1" path="res://Scripts/NPC_Scripts/npc.gd" id="5_eu7l1"]
+[ext_resource type="Texture2D" uid="uid://bbcs5pcthq1v2" path="res://Character Sprites/School Marm.PNG" id="6_fv4w7"]
+[ext_resource type="Texture2D" uid="uid://1tl57v47ultx" path="res://Character Sprites/Mayor.PNG" id="7_fvag4"]
+[ext_resource type="Texture2D" uid="uid://bo632vycu4pot" path="res://Character Sprites/Undertaker.PNG" id="8_kva58"]
+[ext_resource type="Texture2D" uid="uid://xhg3sb757a08" path="res://Character Sprites/Sheriff.PNG" id="9_f5c0m"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -97,7 +101,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80665, 1.20986, -125.139)
 hud_label = NodePath("../HUD/InteractionLabel")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.2742, 0, -147.228)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.2097, 0.00576115, -147.261)
 mesh = SubResource("PlaneMesh_cmany")
 
 [node name="Area3D" type="StaticBody3D" parent="Floor"]
@@ -459,21 +463,6 @@ mesh = SubResource("BoxMesh_bcbcq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350782, 5.26484, 80.5509)
 mesh = SubResource("BoxMesh_js7pq")
 
-[node name="Lady_NPC" type="Node3D" parent="." node_paths=PackedStringArray("interact_label")]
-script = ExtResource("5_eu7l1")
-interact_label = NodePath("../HUD/InteractionLabel")
-
-[node name="Sprite3D" type="Sprite3D" parent="Lady_NPC"]
-transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, -12.4107, 1.22031, -140.143)
-texture = ExtResource("3_bcbcq")
-script = ExtResource("4_js7pq")
-
-[node name="Area3D" type="Area3D" parent="Lady_NPC"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lady_NPC/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1249, 1.2327, -139.686)
-shape = SubResource("BoxShape3D_js7pq")
-
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="InteractionLabel" type="Label" parent="HUD"]
@@ -489,3 +478,88 @@ offset_right = 77.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Press \"E\" to Interact"
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Lady_NPC" type="Node3D" parent="NPCs" node_paths=PackedStringArray("interact_label")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91885, 2.70784, -1.14811)
+script = ExtResource("5_eu7l1")
+interact_label = NodePath("../../HUD/InteractionLabel")
+
+[node name="Sprite3D" type="Sprite3D" parent="NPCs/Lady_NPC"]
+transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, -15.8643, -1.5171, -138.376)
+texture = ExtResource("3_bcbcq")
+script = ExtResource("4_js7pq")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Lady_NPC"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Lady_NPC/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0224, -1.52615, -138.522)
+shape = SubResource("BoxShape3D_js7pq")
+debug_color = Color(0, 0.6, 0.701961, 1)
+
+[node name="Schoolmarm_NPC" type="Node3D" parent="NPCs" node_paths=PackedStringArray("interact_label")]
+transform = Transform3D(0.378713, 0, -0.925514, 0, 1, 0, 0.925514, 0, 0.378713, -5.75651, 3.73413, -133.756)
+script = ExtResource("5_eu7l1")
+interact_label = NodePath("../../HUD/InteractionLabel")
+
+[node name="Sprite3D" type="Sprite3D" parent="NPCs/Schoolmarm_NPC"]
+transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, 0, 0, 0)
+texture = ExtResource("6_fv4w7")
+script = ExtResource("4_js7pq")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Schoolmarm_NPC"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Schoolmarm_NPC/Area3D"]
+shape = SubResource("BoxShape3D_js7pq")
+debug_color = Color(0, 0.6, 0.701961, 1)
+
+[node name="Mayor_NPC" type="Node3D" parent="NPCs" node_paths=PackedStringArray("interact_label")]
+transform = Transform3D(0.670812, -0.0461397, 0.740191, 0.058505, 0.998245, 0.00920427, -0.739316, 0.0371305, 0.672334, -18.8732, 1.66694, -117.218)
+script = ExtResource("5_eu7l1")
+interact_label = NodePath("../../HUD/InteractionLabel")
+
+[node name="Sprite3D" type="Sprite3D" parent="NPCs/Mayor_NPC"]
+transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, 0, 0, 0)
+texture = ExtResource("7_fvag4")
+script = ExtResource("4_js7pq")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Mayor_NPC"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Mayor_NPC/Area3D"]
+shape = SubResource("BoxShape3D_js7pq")
+debug_color = Color(0, 0.6, 0.701961, 1)
+
+[node name="Undertaker_NPC" type="Node3D" parent="NPCs" node_paths=PackedStringArray("interact_label")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.274, 0, -147.228)
+script = ExtResource("5_eu7l1")
+interact_label = NodePath("../../HUD/InteractionLabel")
+
+[node name="Sprite3D" type="Sprite3D" parent="NPCs/Undertaker_NPC"]
+transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, -26.1936, 3.0165, 21.1857)
+texture = ExtResource("8_kva58")
+script = ExtResource("4_js7pq")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Undertaker_NPC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112.94, -688.8, -1427.15)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Undertaker_NPC/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5332, 2.46051, 21.0205)
+shape = SubResource("BoxShape3D_js7pq")
+debug_color = Color(0, 0.6, 0.701961, 1)
+
+[node name="Sheriff_NPC" type="Node3D" parent="NPCs" node_paths=PackedStringArray("interact_label")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8812, 1.63359, 0)
+script = ExtResource("5_eu7l1")
+interact_label = NodePath("../../HUD/InteractionLabel")
+
+[node name="Sprite3D" type="Sprite3D" parent="NPCs/Sheriff_NPC"]
+transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, 0, 0, 0)
+texture = ExtResource("9_f5c0m")
+script = ExtResource("4_js7pq")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Sheriff_NPC"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Sheriff_NPC/Area3D"]
+shape = SubResource("BoxShape3D_js7pq")
+debug_color = Color(0, 0.6, 0.701961, 1)
