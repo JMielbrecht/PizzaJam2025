@@ -1,8 +1,9 @@
 extends Area3D
 
-@export var hit : bool = false
+@export var is_hit : bool = false
 
 func _on_body_entered(body: Node3D) -> void:
-	hit = true
+	is_hit = true
+	print("HIT")
 	body.queue_free()
 	pass # Replace with function body.

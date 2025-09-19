@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-@export var speed = 5.5
+@export var speed = 10
 @export var jump_speed = 4.5
 
 @export var MOUSE_SENSITIVITY : float = 0.25
@@ -107,7 +107,10 @@ func _physics_process(delta):
 	
 	
 	
-	
+	if Input.is_action_pressed("sprint"):
+		speed = 30
+	else:
+		speed = 6
 	
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
