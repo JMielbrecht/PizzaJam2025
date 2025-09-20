@@ -19,7 +19,6 @@
 [ext_resource type="AudioStream" uid="uid://cwjpcld363g2x" path="res://Audio/western theme.wav" id="15_gn8l5"]
 [ext_resource type="ArrayMesh" uid="uid://cujtnd4oyl60i" path="res://Images/general_good.obj" id="18_cvq6i"]
 [ext_resource type="Texture2D" uid="uid://bps0l71x8akf4" path="res://Images/gen goods/gen_tex.png" id="19_6tx0c"]
-[ext_resource type="Script" uid="uid://b38pupy5b1t7f" path="res://Scripts/NPC_Scripts/mistress.gd" id="4_js7pq"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -753,11 +752,11 @@ surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
 [node name="Book" parent="Buildings" instance=ExtResource("11_6w02q")]
 transform = Transform3D(0.699507, 0, 0, 0, 0.699507, 0, 0, 0, 0.699507, 83.4918, 0.0516952, -9.79596)
 
+[node name="HUD" parent="." instance=ExtResource("4_js7pq")]
+
 [node name="Ms Lady" type="Sprite3D" parent="."]
 transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, 86.4408, 1.22031, -15.2508)
 texture = ExtResource("3_bcbcq")
-
-[node name="HUD" parent="." instance=ExtResource("4_js7pq")]
 
 [node name="TargetBox" parent="." instance=ExtResource("5_eu7l1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5746, 1.99199, -140.329)
