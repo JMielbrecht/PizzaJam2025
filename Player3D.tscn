@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwn5xqvs61so8"]
+[gd_scene load_steps=9 format=3 uid="uid://bwn5xqvs61so8"]
 
 [ext_resource type="Script" uid="uid://df8f66mqh6scl" path="res://player_3d.gd" id="1_7mn4f"]
+[ext_resource type="ArrayMesh" uid="uid://dgrtoj23dym8a" path="res://Images/revolver_1.obj" id="2_4bs16"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7mn4f"]
 
@@ -12,7 +13,13 @@ size = Vector3(0.66, 0.26, 0.29)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ythm3"]
 albedo_color = Color(1, 0, 0, 1)
 
+[sub_resource type="QuadMesh" id="QuadMesh_as0x0"]
+flip_faces = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r8qlg"]
+
 [node name="Player3D" type="CharacterBody3D" node_paths=PackedStringArray("CAMERA_CONTROLLER")]
+transform = Transform3D(0.998039, 0, 0, 0, 0.998039, 0, 0, 0, 0.998039, 0, 0, 0)
 script = ExtResource("1_7mn4f")
 CAMERA_CONTROLLER = NodePath("Camera3D")
 
@@ -34,7 +41,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.442872, 0)
 cull_mask = 1048573
 current = true
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(0.0183513, 0.165073, 0.986111, -0.0256962, 0.986029, -0.164581, -0.999501, -0.022319, 0.0223367, 0.00589448, 1.11317, -0.0437815)
-target_position = Vector3(2, 0, 0)
-collide_with_areas = true
+[node name="GunMesh" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(-1.66103e-08, 0.00928423, 0.379887, 0, 0.379887, -0.00928423, -0.38, -4.05827e-10, -1.66054e-08, 0.342003, -0.61836, -0.610314)
+mesh = ExtResource("2_4bs16")
+
+[node name="BulletSpawnPoint" type="Marker3D" parent="Camera3D/GunMesh"]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, -0.0237866, -0.999717, 0.0244322, 0.999418, -0.0237795, 0.999701, -0.0244253, 0.000581115, 0.739126, 1.01974, 0.0716138)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+mesh = SubResource("QuadMesh_as0x0")
+surface_material_override/0 = SubResource("ShaderMaterial_r8qlg")

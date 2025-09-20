@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-@export var speed = 5.5
+@export var speed = 10
 @export var jump_speed = 4.5
 
 @export var MOUSE_SENSITIVITY : float = 0.25
@@ -10,12 +10,22 @@ extends CharacterBody3D
 @export var CAMERA_CONTROLLER : Camera3D
 @onready var ray_cast_3d = $RayCast3D
 
+@export var HUD : Control
+
+var bullet_inst = load("res://Scenes/bullet_3d.tscn")
+@onready var bullet_spawn_pos = %BulletSpawnPoint
+
+
+
 var mouse_input: bool = false
 var mouse_rotation : Vector3
 var rotation_input : float
 var tilt_input : float
 var player_rotation : Vector3
 var camera_rotation : Vector3
+
+var chamber: int = 6
+@onready var chamber_label = HUD.get_node("ChamberCount")
 
 var can_move : bool = true
 
@@ -25,7 +35,6 @@ func _unhandled_input(event):
 	if mouse_input:
 		rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		tilt_input = -event.relative.y * MOUSE_SENSITIVITY
-		print(Vector2(rotation_input, tilt_input))
 		
 	elif event.is_action_pressed("ui_interact"):
 		# This is just a test. Press "E" anywhere.
@@ -67,6 +76,9 @@ func _ready():
 
 
 func _physics_process(delta):
+	
+	
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -74,7 +86,7 @@ func _physics_process(delta):
 	_update_camera(delta)
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jump_speed
 
 	# Get the input direction and handle the movement/deceleration.
@@ -87,12 +99,36 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
-
+	
 	move_and_slide()
 	
 	
+	if chamber > 0:
+		if Input.is_action_just_pressed("shoot"):
+			var inst = bullet_inst.instantiate()
+			inst.position = bullet_spawn_pos.global_position
+			inst.transform.basis = bullet_spawn_pos.global_transform.basis
+			get_parent().add_child(inst)
+			
+			chamber -= 1
+			chamber_label.text = str(chamber)
+	
+	else:
+		if Input.is_action_just_pressed("reload"):
+			chamber = 6
+			chamber_label.text = str(chamber)
+	
+	
+	
+	
+	if Input.is_action_pressed("sprint"):
+		speed = 30
+	else:
+		speed = 6
 	
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 	

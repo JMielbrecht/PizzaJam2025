@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7ww4xte7imqv"]
+
+[ext_resource type="Script" uid="uid://bhqca4m6t8oru" path="res://Scenes/BulletInst.gd" id="1_brdaf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7s4xq"]
+size = Vector3(0.5, 0.5, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_brdaf"]
+radius = 0.1
+height = 1.025
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brdaf"]
+albedo_color = Color(0.0278004, 0.482755, 0.853574, 1)
+
+[node name="Bullet3D" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_brdaf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_7s4xq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_brdaf")
+surface_material_override/0 = SubResource("StandardMaterial3D_brdaf")
