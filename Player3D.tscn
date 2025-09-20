@@ -14,10 +14,12 @@ size = Vector3(0.66, 0.26, 0.29)
 albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_as0x0"]
+flip_faces = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r8qlg"]
 
 [node name="Player3D" type="CharacterBody3D" node_paths=PackedStringArray("CAMERA_CONTROLLER")]
+transform = Transform3D(0.998039, 0, 0, 0, 0.998039, 0, 0, 0, 0.998039, 0, 0, 0)
 script = ExtResource("1_7mn4f")
 CAMERA_CONTROLLER = NodePath("Camera3D")
 

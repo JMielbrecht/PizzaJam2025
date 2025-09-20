@@ -1,19 +1,24 @@
-[gd_scene load_steps=31 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=40 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://clpjhfk24sw4u" path="res://Images/pj_sand.png" id="2_b2ar6"]
 [ext_resource type="Texture2D" uid="uid://cn3afkijffu7u" path="res://Images/Lady of the Night.PNG" id="3_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://t24qcbs5ndjw" path="res://Scenes/HUG.tscn" id="4_js7pq"]
+[ext_resource type="ArrayMesh" uid="uid://bcsf6g5hf8m3t" path="res://Images/church/church.obj" id="4_sjtuv"]
+[ext_resource type="Texture2D" uid="uid://cwxhi6wrs2l63" path="res://Images/church/church texture.png" id="5_cvq6i"]
 [ext_resource type="PackedScene" uid="uid://c88q02kpnmkkg" path="res://Scenes/Target.tscn" id="5_eu7l1"]
 [ext_resource type="PackedScene" uid="uid://8nfxae8e1qv0" path="res://Scenes/Parry.tscn" id="6_p1v5b"]
-[ext_resource type="ArrayMesh" uid="uid://ce5wv6tlba17t" path="res://Images/general_store.obj" id="7_wygdx"]
 [ext_resource type="ArrayMesh" uid="uid://cfidaxywlk2ue" path="res://Images/sheriff2.obj" id="8_bah7m"]
 [ext_resource type="ArrayMesh" uid="uid://cl1up0ikyg4sh" path="res://Images/mining_post.obj" id="9_fvag4"]
 [ext_resource type="ArrayMesh" uid="uid://dp73bywusye84" path="res://Images/hardware_st.obj" id="10_kva58"]
+[ext_resource type="PackedScene" uid="uid://c1x6s5swflc0q" path="res://Scenes/book.tscn" id="11_6w02q"]
 [ext_resource type="ArrayMesh" uid="uid://2l1wlfdl6l2i" path="res://Images/potty_1.obj" id="11_kva58"]
 [ext_resource type="ArrayMesh" uid="uid://cow000rrfw5id" path="res://Images/saloon.obj" id="12_f5c0m"]
 [ext_resource type="ArrayMesh" uid="uid://8wkyd31vtxo5" path="res://Images/Cactus.obj" id="14_ee7l0"]
+[ext_resource type="AudioStream" uid="uid://cwjpcld363g2x" path="res://Audio/western theme.wav" id="15_gn8l5"]
+[ext_resource type="ArrayMesh" uid="uid://cujtnd4oyl60i" path="res://Images/general_good.obj" id="18_cvq6i"]
+[ext_resource type="Texture2D" uid="uid://bps0l71x8akf4" path="res://Images/gen goods/gen_tex.png" id="19_6tx0c"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -24,10 +29,9 @@ sky_material = SubResource("PhysicalSkyMaterial_c6gwx")
 background_mode = 2
 sky = SubResource("Sky_2dftf")
 fog_enabled = true
-fog_light_color = Color(0.0244137, 2.7803e-05, 0.0752429, 1)
-fog_light_energy = 10.2
-fog_density = 0.0314
-fog_aerial_perspective = 0.03
+fog_light_color = Color(0.00377788, 3.00817e-09, 0.0891459, 1)
+fog_light_energy = 6.5
+fog_density = 0.0494
 fog_depth_curve = 0.241485
 fog_depth_begin = 0.0
 fog_depth_end = 73.2
@@ -54,26 +58,45 @@ size = Vector3(500, 0.1, 500)
 [sub_resource type="PlaneMesh" id="PlaneMesh_p1v5b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wygdx"]
+albedo_color = Color(0.1789, 0.000126644, 0.23956, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wygdx"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fv4w7"]
 size = Vector3(3.795, 3.69, 5.915)
 
-[sub_resource type="BoxMesh" id="BoxMesh_p1v5b"]
-size = Vector3(7.215, 8.765, 11.035)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tx0c"]
+albedo_texture = ExtResource("5_cvq6i")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0to5b"]
+albedo_texture = ExtResource("5_cvq6i")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5j71u"]
+albedo_texture = ExtResource("5_cvq6i")
+texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_wygdx"]
 size = Vector3(6.585, 6.36, 5.545)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_eu7l1"]
-size = Vector3(5.75537, 3.38354, 2.89697)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6w02q"]
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn8l5"]
 albedo_color = Color(9.62615e-07, 0.381347, 0.175548, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eu7l1"]
+size = Vector3(5.75537, 3.38354, 2.89697)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyqkj"]
+albedo_texture = ExtResource("19_6tx0c")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydbc3"]
+albedo_texture = ExtResource("19_6tx0c")
+uv1_offset = Vector3(0.655, 0, 0)
+texture_filter = 0
 
 [node name="Node3D" type="Node3D"]
 
@@ -112,7 +135,7 @@ mesh = SubResource("PlaneMesh_p1v5b")
 surface_material_override/0 = SubResource("StandardMaterial3D_wygdx")
 
 [node name="MeshInstance3D55" type="MeshInstance3D" parent="Buildings"]
-transform = Transform3D(0.337487, 0, 7.2713, 0, 1, 0, -0.942669, 0, 2.60322, 62.4529, 0.179175, -8.85435)
+transform = Transform3D(0.337487, 0, 7.2713, 0, 1, 0, -0.942669, 0, 2.60322, 62.0316, 0.179175, -9.50164)
 mesh = SubResource("PlaneMesh_p1v5b")
 surface_material_override/0 = SubResource("StandardMaterial3D_wygdx")
 
@@ -187,12 +210,12 @@ mesh = SubResource("PlaneMesh_wygdx")
 skeleton = NodePath("../MeshInstance3D56")
 
 [node name="MeshInstance3D67" type="MeshInstance3D" parent="Buildings"]
-transform = Transform3D(0.95003, 0, 4.86978, 0, 0.999999, 0, -2.15177, 0, 2.15006, 78.3321, 0.179183, -148.265)
+transform = Transform3D(0.477069, 0, 5.21266, 0, 0.999999, 0, -2.30328, 0, 1.07968, 78.7653, 0.179183, -150.925)
 mesh = SubResource("PlaneMesh_wygdx")
 skeleton = NodePath("../MeshInstance3D56")
 
 [node name="MeshInstance3D68" type="MeshInstance3D" parent="Buildings"]
-transform = Transform3D(0.557371, 0, 3.65624, 0, 0.999999, 0, -0.756828, 0, 2.69266, 90.083, 0.179187, -141.1)
+transform = Transform3D(0.420903, 0, 4.06003, 0, 0.999999, 0, -0.840412, 0, 2.03338, 91.0099, 0.179185, -145.443)
 mesh = SubResource("PlaneMesh_wygdx")
 skeleton = NodePath("../MeshInstance3D56")
 
@@ -255,13 +278,17 @@ skeleton = NodePath("../MeshInstance3D56")
 transform = Transform3D(-0.998705, 0, 0.050872, 0, 1, 0, -0.050872, 0, -0.998705, 107.717, 1.60857, -82.0316)
 mesh = SubResource("BoxMesh_fv4w7")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(4.99783, 0, 0.147457, 0, 5, 0, -0.147457, 0, 4.99783, 99.7403, 7.8195, -193.855)
+mesh = ExtResource("4_sjtuv")
+skeleton = NodePath("../MeshInstance3D84")
+surface_material_override/0 = SubResource("StandardMaterial3D_6tx0c")
+surface_material_override/1 = SubResource("StandardMaterial3D_0to5b")
+surface_material_override/2 = SubResource("StandardMaterial3D_5j71u")
+
 [node name="MeshInstance3D84" type="MeshInstance3D" parent="Buildings"]
 transform = Transform3D(-0.75284, 0, 0.658204, 0, 1, 0, -0.658204, 0, -0.75284, 91.6401, 1.60857, -116.661)
 mesh = SubResource("BoxMesh_fv4w7")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Buildings/MeshInstance3D84"]
-transform = Transform3D(0.753713, 0, 0.657205, 0, 1, 0, -0.657205, 0, 0.753713, 51.9412, 2.18307, 71.7158)
-mesh = SubResource("BoxMesh_p1v5b")
 
 [node name="MeshInstance3D82" type="MeshInstance3D" parent="Buildings"]
 transform = Transform3D(-0.0442992, 0, 0.999018, 0, 1, 0, -0.999018, 0, -0.0442992, -1.68127, 3.06086, -118.07)
@@ -297,6 +324,434 @@ transform = Transform3D(0.673189, 0, 5.71707, 0, 1, 0, -0.741175, 0, 5.19266, 49
 mesh = SubResource("PlaneMesh_p1v5b")
 surface_material_override/0 = SubResource("StandardMaterial3D_wygdx")
 
+[node name="Sheriff2" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-4.34108, 0, -2.48093, 0, 5, 0, 2.48093, 0, -4.34108, 52.3074, 2.71388, -157.419)
+mesh = ExtResource("8_bah7m")
+skeleton = NodePath("../..")
+
+[node name="MiningPost" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(2.64271, 0, -4.24454, 0, 5, 0, 4.24454, 0, 2.64271, 32.7352, 1.78176, -24.006)
+mesh = ExtResource("9_fvag4")
+skeleton = NodePath("../..")
+
+[node name="HardwareSt" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(4.98544, 0, -0.381333, 0, 5, 0, 0.381333, 0, 4.98544, 38.2788, 2.45331, -129.221)
+mesh = ExtResource("10_kva58")
+skeleton = NodePath("../..")
+
+[node name="Potty1" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(2.55789, 0, -4.29618, 0, 5, 0, 4.29618, 0, 2.55789, 24.3859, 1.78623, -31.2088)
+mesh = ExtResource("11_kva58")
+skeleton = NodePath("../..")
+
+[node name="Saloon" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-3.65427, 0, -3.41267, 0, 5, 0, 3.41267, 0, -3.65427, 61.0737, 3.48121, -113.894)
+mesh = ExtResource("12_f5c0m")
+skeleton = NodePath("../..")
+
+[node name="Cactus2" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.382817, 0, 0.644943, 0, 0.75, 0, -0.644943, 0, 0.382817, 74.852, 0.0500002, -12.1016)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus4" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.741291, 0, -0.300811, 0, 0.8, 0, 0.300811, 0, 0.741291, 63.4653, 0.0499992, 0.0851631)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus5" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.344981, 0, 0.831257, 0, 0.9, 0, -0.831257, 0, 0.344981, 51.8757, 0.0499992, -7.4248)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus3" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.213395, 0, -0.452175, 0, 0.5, 0, 0.452175, 0, 0.213395, 75.2441, 0.0500002, -4.40029)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus6" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.74994, 0, -0.00951621, 0, 0.75, 0, 0.00951621, 0, -0.74994, 33.6242, 0.0500002, -42.9142)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus7" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.129724, 0, 0.789412, 0, 0.8, 0, -0.789412, 0, -0.129724, 49.9598, 0.0499992, -39.55)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus8" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.889212, 0, -0.138929, 0, 0.9, 0, 0.138929, 0, -0.889212, 49.5926, 0.0499992, -25.7448)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus9" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.274635, 0, 0.417822, 0, 0.5, 0, -0.417822, 0, 0.274635, 39.9919, 0.0500002, -47.2635)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus10" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.732003, 0, 0.163314, 0, 0.75, 0, -0.163314, 0, 0.732003, 48.3074, 0.0500002, 46.4369)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus11" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.289065, 0, -0.74595, 0, 0.8, 0, 0.74595, 0, 0.289065, 31.6291, 0.0499992, 46.4989)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus12" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.841733, 0, 0.318568, 0, 0.9, 0, -0.318568, 0, 0.841733, 29.1536, 0.0499992, 32.9125)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus13" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.182983, 0, -0.465314, 0, 0.5, 0, 0.465314, 0, -0.182983, 42.9686, 0.0500002, 52.0011)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus14" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.693135, 0, 0.286468, 0, 0.75, 0, -0.286468, 0, -0.693135, 96.1672, 0.0500002, 36.6454)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus15" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.416641, 0, -0.682942, 0, 0.8, 0, 0.682942, 0, -0.416641, 94.5295, 0.0499992, 50.796)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus16" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.597675, 0, 0.672893, 0, 0.9, 0, -0.672893, 0, -0.597675, 85.0391, 0.0499973, 41.8121)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus17" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.0612464, 0, -0.496235, 0, 0.5, 0, 0.496235, 0, -0.0612464, 105.726, 0.0500002, 45.0093)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus18" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.487603, 0, -0.569862, 0, 0.75, 0, 0.569862, 0, -0.487603, 139.211, 0.0500002, 40.6541)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus19" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.519739, 0, -0.60817, 0, 0.8, 0, 0.60817, 0, 0.519739, 152.153, 0.0499992, 46.6063)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus20" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(-0.82526, 0, -0.35909, 0, 0.9, 0, 0.35909, 0, -0.82526, 140.666, 0.0499973, 52.8367)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Cactus21" type="MeshInstance3D" parent="Buildings"]
+transform = Transform3D(0.452662, 0, -0.21236, 0, 0.5, 0, 0.21236, 0, 0.452662, 150.131, 0.0500002, 34.1658)
+mesh = ExtResource("14_ee7l0")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
+surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
+surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+
+[node name="Book" parent="Buildings" instance=ExtResource("11_6w02q")]
+transform = Transform3D(0.699507, 0, 0, 0, 0.699507, 0, 0, 0, 0.699507, 83.4918, 0.0516952, -9.79596)
+
 [node name="Ms Lady" type="Sprite3D" parent="."]
 transform = Transform3D(0.131023, 0, 0.0382343, 0, 0.136487, 0, -0.0382343, 0, 0.131023, 86.4408, 1.22031, -15.2508)
 texture = ExtResource("3_bcbcq")
@@ -313,406 +768,19 @@ shape = SubResource("BoxShape3D_eu7l1")
 [node name="Parry3D" parent="." instance=ExtResource("6_p1v5b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.5022, 0.255247, -16.5982)
 
-[node name="GeneralStore" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.11429, 0, 4.87425, 0, 5, 0, -4.87425, 0, 1.11429, 61.4966, 3.8434, -105.907)
-mesh = ExtResource("7_wygdx")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_gn8l5")
 
-[node name="Sheriff2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.34108, 0, -2.48093, 0, 5, 0, 2.48093, 0, -4.34108, 52.3074, 2.71388, -157.419)
-mesh = ExtResource("8_bah7m")
-
-[node name="MiningPost" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.64271, 0, -4.24454, 0, 5, 0, 4.24454, 0, 2.64271, 32.7352, 1.78176, -24.006)
-mesh = ExtResource("9_fvag4")
-
-[node name="HardwareSt" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.98544, 0, -0.381333, 0, 5, 0, 0.381333, 0, 4.98544, 38.2788, 2.45331, -129.221)
-mesh = ExtResource("10_kva58")
-
-[node name="Potty1" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.55789, 0, -4.29618, 0, 5, 0, 4.29618, 0, 2.55789, 24.3859, 1.78623, -31.2088)
-mesh = ExtResource("11_kva58")
-
-[node name="Saloon" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.97011, 0, -3.03944, 0, 5, 0, 3.03944, 0, -3.97011, 64.487, 3.48121, -130.833)
-mesh = ExtResource("12_f5c0m")
-
-[node name="Cactus2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.382817, 0, 0.644943, 0, 0.75, 0, -0.644943, 0, 0.382817, 74.852, 0.0500002, -12.1016)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.741291, 0, -0.300811, 0, 0.8, 0, 0.300811, 0, 0.741291, 63.4653, 0.0499992, 0.0851631)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus5" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.344981, 0, 0.831257, 0, 0.9, 0, -0.831257, 0, 0.344981, 51.8757, 0.0499992, -7.4248)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.213395, 0, -0.452175, 0, 0.5, 0, 0.452175, 0, 0.213395, 75.2441, 0.0500002, -4.40029)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus6" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.74994, 0, -0.00951621, 0, 0.75, 0, 0.00951621, 0, -0.74994, 33.6242, 0.0500002, -42.9142)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus7" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.129724, 0, 0.789412, 0, 0.8, 0, -0.789412, 0, -0.129724, 49.9598, 0.0499992, -39.55)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus8" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.889212, 0, -0.138929, 0, 0.9, 0, 0.138929, 0, -0.889212, 49.5926, 0.0499992, -25.7448)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus9" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.274635, 0, 0.417822, 0, 0.5, 0, -0.417822, 0, 0.274635, 39.9919, 0.0500002, -47.2635)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus10" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.732003, 0, 0.163314, 0, 0.75, 0, -0.163314, 0, 0.732003, 48.3074, 0.0500002, 46.4369)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus11" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.289065, 0, -0.74595, 0, 0.8, 0, 0.74595, 0, 0.289065, 31.6291, 0.0499992, 46.4989)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus12" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.841733, 0, 0.318568, 0, 0.9, 0, -0.318568, 0, 0.841733, 29.1536, 0.0499992, 32.9125)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus13" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.182983, 0, -0.465314, 0, 0.5, 0, 0.465314, 0, -0.182983, 42.9686, 0.0500002, 52.0011)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus14" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.693135, 0, 0.286468, 0, 0.75, 0, -0.286468, 0, -0.693135, 96.1672, 0.0500002, 36.6454)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus15" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.416641, 0, -0.682942, 0, 0.8, 0, 0.682942, 0, -0.416641, 94.5295, 0.0499992, 50.796)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus16" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.597675, 0, 0.672893, 0, 0.9, 0, -0.672893, 0, -0.597675, 85.0391, 0.0499973, 41.8121)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus17" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.0612464, 0, -0.496235, 0, 0.5, 0, 0.496235, 0, -0.0612464, 105.726, 0.0500002, 45.0093)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus18" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.487603, 0, -0.569862, 0, 0.75, 0, 0.569862, 0, -0.487603, 139.211, 0.0500002, 40.6541)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus19" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.519739, 0, -0.60817, 0, 0.8, 0, 0.60817, 0, 0.519739, 152.153, 0.0499992, 46.6063)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus20" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.82526, 0, -0.35909, 0, 0.9, 0, 0.35909, 0, -0.82526, 140.666, 0.0499973, 52.8367)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
-
-[node name="Cactus21" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.452662, 0, -0.21236, 0, 0.5, 0, 0.21236, 0, 0.452662, 150.131, 0.0500002, 34.1658)
-mesh = ExtResource("14_ee7l0")
-surface_material_override/0 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/1 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/2 = SubResource("StandardMaterial3D_6w02q")
-surface_material_override/3 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/4 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/5 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/6 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/7 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/8 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/9 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/10 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/11 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/12 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/13 = SubResource("StandardMaterial3D_gn8l5")
-surface_material_override/14 = SubResource("StandardMaterial3D_gn8l5")
+[node name="GeneralGood" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.65947, 0, 1.81365, 0, 5, 0, -1.81365, 0, 4.65947, 66.1278, 3.87044, -139.997)
+mesh = ExtResource("18_cvq6i")
+surface_material_override/0 = SubResource("StandardMaterial3D_jyqkj")
+surface_material_override/1 = SubResource("StandardMaterial3D_ydbc3")
+surface_material_override/2 = SubResource("StandardMaterial3D_jyqkj")
+surface_material_override/3 = SubResource("StandardMaterial3D_jyqkj")
+surface_material_override/4 = SubResource("StandardMaterial3D_jyqkj")
+surface_material_override/5 = SubResource("StandardMaterial3D_jyqkj")
+surface_material_override/6 = SubResource("StandardMaterial3D_jyqkj")
+surface_material_override/7 = SubResource("StandardMaterial3D_jyqkj")
+surface_material_override/8 = SubResource("StandardMaterial3D_jyqkj")
+surface_material_override/9 = SubResource("StandardMaterial3D_jyqkj")

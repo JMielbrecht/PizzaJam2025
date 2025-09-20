@@ -72,7 +72,7 @@ func _physics_process(delta):
 	_update_camera(delta)
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jump_speed
 
 	# Get the input direction and handle the movement/deceleration.
