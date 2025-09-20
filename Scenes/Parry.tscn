@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://8nfxae8e1qv0"]
+
+[ext_resource type="PackedScene" uid="uid://c88q02kpnmkkg" path="res://Scenes/Target.tscn" id="1_00okd"]
+[ext_resource type="Script" uid="uid://ekcm71wfn1u" path="res://Scenes/Parry.gd" id="1_5ucj6"]
+[ext_resource type="Texture2D" uid="uid://cjpi2d006l563" path="res://Images/RING.png" id="2_dt2dp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ideb7"]
+size = Vector3(0.75, 0.75, 0.75)
+
+[node name="Parry3D" type="Node3D"]
+script = ExtResource("1_5ucj6")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00604, 4.5783)
+pixel_size = 0.001
+texture = ExtResource("2_dt2dp")
+
+[node name="TargetBox" parent="Sprite3D" instance=ExtResource("1_00okd")]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/TargetBox"]
+shape = SubResource("BoxShape3D_ideb7")
+
+[node name="Origin" type="Marker3D" parent="."]
+unique_name_in_owner = true

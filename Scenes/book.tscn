@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1x6s5swflc0q"]
+
+[ext_resource type="PackedScene" uid="uid://c88q02kpnmkkg" path="res://Scenes/Target.tscn" id="1_kh36y"]
+[ext_resource type="Script" uid="uid://cdouqa7pk76br" path="res://Scripts/Book.gd" id="1_y0hms"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_d7s7k"]
+top_radius = 0.75
+bottom_radius = 0.75
+
+[sub_resource type="BoxMesh" id="BoxMesh_d7s7k"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_y0hms"]
+radius = 0.963379
+
+[node name="Book" type="Node3D"]
+script = ExtResource("1_y0hms")
+
+[node name="TNTMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.998305, 0)
+mesh = SubResource("CylinderMesh_d7s7k")
+
+[node name="BookMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.13527, 0, 0, 0, 0.69724, 0.0338626, 2.23928, 0)
+mesh = SubResource("BoxMesh_d7s7k")
+
+[node name="BookTarget" parent="." instance=ExtResource("1_kh36y")]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BookTarget"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_y0hms")
