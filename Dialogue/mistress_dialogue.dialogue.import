@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cv1vuk1tdirjm"
+path="res://.godot/imported/mistress_dialogue.dialogue-f6beb9a5a084761d050f7d3f15b5973d.tres"
+
+[deps]
+
+source_file="res://Dialogue/mistress_dialogue.dialogue"
+dest_files=["res://.godot/imported/mistress_dialogue.dialogue-f6beb9a5a084761d050f7d3f15b5973d.tres"]
+
+[params]
+
+defaults=true

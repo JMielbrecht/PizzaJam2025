@@ -1,0 +1,6 @@
+~ start
+Teacher: <greeting>
+Teacher: <Complaint about being stuck on same page for years>
+~ after_help
+	Teacher: <gratitude for helping out, maybe something else>
+=> END
