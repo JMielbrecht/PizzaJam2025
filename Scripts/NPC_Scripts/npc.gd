@@ -9,7 +9,7 @@ func _ready():
 	$Area3D.body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body):
-	print("entered")
+	print("entered by", body)
 	if body.name == "Player3D":  # Or check with body.is_in_group("player")
 		print("interactable!!!")
 		body.current_interactable = self
@@ -25,6 +25,7 @@ func _on_body_exited(body):
 		player_node = null
 		if interact_label:
 			interact_label.visible = false
+			body.current_interactable = null
 
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("ui_interact"):
