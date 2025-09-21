@@ -48,8 +48,6 @@ func _unhandled_input(event):
 		
 	elif Input.is_action_just_pressed("ui_interact"):
 		if current_interactable:
-			print("Should start dialogue")
-			# This is just a test. Press "E" anywhere.
 			current_interactable.start_dialog()
 
 func _update_camera(delta):
@@ -102,9 +100,9 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	
 	if chamber > 0:
-		if Input.is_action_just_pressed("shoot"):
+		if Input.is_action_just_pressed("shoot") && GlobalData.talking_to_npc == false:
+			print("Talking to NPC?", GlobalData.talking_to_npc)
 			var inst = bullet_inst.instantiate()
 			inst.position = bullet_spawn_pos.global_position
 			inst.transform.basis = bullet_spawn_pos.global_transform.basis

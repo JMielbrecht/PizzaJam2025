@@ -1,9 +1,20 @@
 extends Sprite3D
 
+var has_interacted: bool
+var count: float
+
+func _ready():
+	has_interacted = false
+	count = 0
+
 func start_dialog():
-	print("Farmer talking")
 	var resource = load("res://Dialogue/salami_dialogue.dialogue")
-	var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
+	var section
+	if (has_interacted): 
+		section = "random"
+	else:
+		section = "start"
+	#var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, section)
 	
 	# then
-	DialogueManager.show_dialogue_balloon(resource)
+	DialogueManager.show_dialogue_balloon(resource, section)

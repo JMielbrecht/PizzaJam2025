@@ -6,5 +6,7 @@ extends Node
 @export var mayor_task_complete : bool = false
 @export var undertaker_task_complete : bool = false
 
+@export var talking_to_npc : bool = false
+
 func _ready():
 	randomize()

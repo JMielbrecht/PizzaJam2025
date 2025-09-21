@@ -3,14 +3,17 @@ extends Sprite3D
 var has_interacted: bool
 var count: float
 
+
 func _ready():
 	has_interacted = false
-	count = 0
 
 func start_dialog():
-	print("Mistress talking")
-	count = count + 1
-	print('COUNT IS NOW: ', count)
+	if (DialogueManager.dialogue_started):
+		print("STAAAARRRRRT")
+		GlobalData.talking_to_npc = true
+		
+	print("Lady talking")
+	
 	var resource = load("res://Dialogue/mistress_dialogue.dialogue")
 	var finishedTask = GlobalData.mistress_task_complete
 	var dialogue_line 
@@ -27,4 +30,4 @@ func start_dialog():
 		has_interacted = true
 	
 	# then
-	resource.get_next_dialogue_line(section)
+	DialogueManager.show_dialogue_balloon(resource, section)

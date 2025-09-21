@@ -26,6 +26,7 @@ func _on_body_exited(body):
 		player_node = null
 		body.current_interactable = null
 		print('interact_label:', interact_label)
+		GlobalData.talking_to_npc = false
 		if interact_label:
 			interact_label.visible = false
 			interact_label.text = ""
