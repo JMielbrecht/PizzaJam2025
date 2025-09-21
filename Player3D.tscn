@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwn5xqvs61so8"]
+[gd_scene load_steps=11 format=3 uid="uid://bwn5xqvs61so8"]
 
 [ext_resource type="Script" uid="uid://df8f66mqh6scl" path="res://player_3d.gd" id="1_7mn4f"]
-[ext_resource type="ArrayMesh" uid="uid://dgrtoj23dym8a" path="res://Images/revolver_1.obj" id="2_4bs16"]
+[ext_resource type="ArrayMesh" uid="uid://bwijrxk5s7uyy" path="res://Images/gun/revolver_1.obj" id="2_6muop"]
+[ext_resource type="Texture2D" uid="uid://fmv0vd1jpgpl" path="res://Images/gun/texture.png" id="3_as0x0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7mn4f"]
 
@@ -12,6 +13,11 @@ size = Vector3(0.66, 0.26, 0.29)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ythm3"]
 albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8qlg"]
+albedo_color = Color(0.617455, 0.617455, 0.617455, 1)
+albedo_texture = ExtResource("3_as0x0")
+texture_filter = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_as0x0"]
 flip_faces = true
@@ -43,7 +49,16 @@ current = true
 
 [node name="GunMesh" type="MeshInstance3D" parent="Camera3D"]
 transform = Transform3D(-1.66103e-08, 0.00928423, 0.379887, 0, 0.379887, -0.00928423, -0.38, -4.05827e-10, -1.66054e-08, 0.342003, -0.61836, -0.610314)
-mesh = ExtResource("2_4bs16")
+mesh = ExtResource("2_6muop")
+surface_material_override/0 = SubResource("StandardMaterial3D_r8qlg")
+surface_material_override/1 = SubResource("StandardMaterial3D_r8qlg")
+surface_material_override/2 = SubResource("StandardMaterial3D_r8qlg")
+surface_material_override/3 = SubResource("StandardMaterial3D_r8qlg")
+surface_material_override/4 = SubResource("StandardMaterial3D_r8qlg")
+surface_material_override/5 = SubResource("StandardMaterial3D_r8qlg")
+surface_material_override/6 = SubResource("StandardMaterial3D_r8qlg")
+surface_material_override/7 = SubResource("StandardMaterial3D_r8qlg")
+surface_material_override/8 = SubResource("StandardMaterial3D_r8qlg")
 
 [node name="BulletSpawnPoint" type="Marker3D" parent="Camera3D/GunMesh"]
 unique_name_in_owner = true
