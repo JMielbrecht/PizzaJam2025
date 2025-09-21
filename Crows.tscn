@@ -1,11 +1,167 @@
-[gd_scene load_steps=3 format=3 uid="uid://r7solpbmagx8"]
+[gd_scene load_steps=16 format=3 uid="uid://r7solpbmagx8"]
 
 [ext_resource type="Script" uid="uid://dcsf2exbbnp8j" path="res://crows.gd" id="1_dmq8t"]
+[ext_resource type="Texture2D" uid="uid://cq4hc4icuckg4" path="res://Character Sprites/Untitled 19 copy 2.png" id="2_qyb15"]
+[ext_resource type="Texture2D" uid="uid://cl5cpdki3fpra" path="res://Character Sprites/Untitled 18 copy 2.png" id="3_v4l6e"]
 
-[sub_resource type="PrismMesh" id="PrismMesh_dmq8t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4l6e"]
+atlas = ExtResource("2_qyb15")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw67j"]
+atlas = ExtResource("2_qyb15")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es406"]
+atlas = ExtResource("2_qyb15")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1gi6"]
+atlas = ExtResource("2_qyb15")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oakq3"]
+atlas = ExtResource("2_qyb15")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3op8u"]
+atlas = ExtResource("2_qyb15")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jae1d"]
+atlas = ExtResource("3_v4l6e")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcixv"]
+atlas = ExtResource("3_v4l6e")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jae1d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4l6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw67j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es406")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1gi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oakq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3op8u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_jae1d")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_xcixv")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_v4l6e"]
+resource_name = "flying"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("c1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.35996, 0), Vector3(23.0982, 19.8708, -1.90735e-06)]
+}
+
+[sub_resource type="Animation" id="Animation_rw67j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("c1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.35996, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_es406"]
+_data = {
+&"RESET": SubResource("Animation_rw67j"),
+&"flying": SubResource("Animation_v4l6e")
+}
 
 [node name="Crows" type="Marker3D"]
 script = ExtResource("1_dmq8t")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("PrismMesh_dmq8t")
+[node name="c1" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(2.15, 0, 0, 0, 2.15, 0, 0, 0, 2.15, 0, 0.35996, 0)
+pixel_size = 0.026
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_jae1d")
+animation = &"fly"
+frame_progress = 0.255411
+
+[node name="c2" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(2.15, 0, 0, 0, 2.15, 0, 0, 0, 2.15, 4.64569, 0.35996, -1.71317)
+pixel_size = 0.026
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_jae1d")
+frame_progress = 0.720703
+
+[node name="c3" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(2.15, 0, 0, 0, 2.15, 0, 0, 0, 2.15, -3.57924, 0.35996, 0.829385)
+flip_h = true
+pixel_size = 0.026
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_jae1d")
+frame_progress = 0.559402
+
+[node name="c4" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(2.15, 0, 0, 0, 2.15, 0, 0, 0, 2.15, -5.5906, 0.35996, -2.00541)
+pixel_size = 0.026
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_jae1d")
+frame_progress = 0.799212
+
+[node name="c5" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(2.15, 0, 0, 0, 2.15, 0, 0, 0, 2.15, 3.00603, 0.35996, 2.11983)
+flip_h = true
+pixel_size = 0.026
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_jae1d")
+frame_progress = 0.387373
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_es406")
+}
