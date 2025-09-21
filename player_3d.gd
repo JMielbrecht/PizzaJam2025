@@ -114,11 +114,9 @@ func _physics_process(delta):
 			chamber_label.text = str(chamber)
 	
 	if Input.is_action_just_pressed("reload"):
-			chamber = 6
-			chamber_label.text = str(chamber)
+		chamber = 6
+		chamber_label.text = str(chamber)
 		reload_label.text = "Press R to Reload..."
-	
-	
 	
 	
 	if Input.is_action_pressed("sprint"):

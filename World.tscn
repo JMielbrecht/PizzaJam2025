@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=82 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
@@ -21,25 +21,6 @@
 [ext_resource type="AudioStream" uid="uid://cwjpcld363g2x" path="res://Audio/western theme.wav" id="15_gn8l5"]
 [ext_resource type="Texture2D" uid="uid://d3b7xqm41q3qq" path="res://Images/Dirt Cloud/IMG_2611.PNG" id="16_6xgc5"]
 [ext_resource type="ArrayMesh" uid="uid://cujtnd4oyl60i" path="res://Images/general_good.obj" id="18_cvq6i"]
-[ext_resource type="Script" uid="uid://b38pupy5b1t7f" path="res://Scripts/NPC_Scripts/mistress.gd" id="19_0to5b"]
-[ext_resource type="Texture2D" uid="uid://bps0l71x8akf4" path="res://Images/gen goods/gen_tex.png" id="19_6tx0c"]
-[ext_resource type="Script" uid="uid://bgutijjkqikhr" path="res://Scripts/NPC_Scripts/farmer.gd" id="21_5j71u"]
-[ext_resource type="Script" uid="uid://b5wb5gnw6fvi1" path="res://Scripts/NPC_Scripts/npc.gd" id="21_jyqkj"]
-[ext_resource type="Texture2D" uid="uid://py6vdfspx4ov" path="res://Character Sprites/Farmer.PNG" id="22_c2gv2"]
-[ext_resource type="Texture2D" uid="uid://bo632vycu4pot" path="res://Character Sprites/Undertaker.PNG" id="24_rp4qs"]
-[ext_resource type="Script" uid="uid://bchdrk5lqv12m" path="res://Character Sprites/undertaker_sprite.gd" id="25_gtthi"]
-[ext_resource type="Texture2D" uid="uid://1tl57v47ultx" path="res://Character Sprites/Mayor.PNG" id="25_rhl3w"]
-[ext_resource type="Texture2D" uid="uid://xhg3sb757a08" path="res://Character Sprites/Sheriff.PNG" id="26_bun23"]
-[ext_resource type="Texture2D" uid="uid://bbcs5pcthq1v2" path="res://Character Sprites/School Marm.PNG" id="27_gtthi"]
-[ext_resource type="Script" uid="uid://ba0pmnrlbtdcg" path="res://Character Sprites/mayor_sprite.gd" id="27_mnkyj"]
-[ext_resource type="Script" uid="uid://dmp7bte11wluy" path="res://Scripts/NPC_Scripts/sheriff.gd" id="29_mnkyj"]
-[ext_resource type="Script" uid="uid://bm3mkqrjsbnj" path="res://Scripts/NPC_Scripts/schoolmarm.gd" id="30_gtthi"]
-[ext_resource type="Script" uid="uid://bg6xpidakdqgf" path="res://Scripts/NPC_Scripts/salami_sprite.gd" id="31_6xgc5"]
-[ext_resource type="Texture2D" uid="uid://devgugqs2rrqe" path="res://Character Sprites/Johnny Salami.PNG" id="32_fif40"]
-[ext_resource type="Texture2D" uid="uid://dibpyor8omew0" path="res://Character Sprites/Banker.PNG" id="34_yktx5"]
-[ext_resource type="Texture2D" uid="uid://dxeuov0u6qalo" path="res://Character Sprites/Nun.PNG" id="35_88f54"]
-[ext_resource type="Texture2D" uid="uid://dgber1mj8u1xn" path="res://Character Sprites/Blacksmith.PNG" id="36_s3rcb"]
-[ext_resource type="Texture2D" uid="uid://dn46i6qdp0nv" path="res://Character Sprites/Salesman.PNG" id="37_wf24g"]
 [ext_resource type="Script" uid="uid://cvlir5tw5oxpv" path="res://dust.gd" id="18_mnkyj"]
 [ext_resource type="ArrayMesh" uid="uid://fjmwyvwo5lpm" path="res://Images/hard/hardware_store.obj" id="19_0to5b"]
 [ext_resource type="Texture2D" uid="uid://bps0l71x8akf4" path="res://Images/gen goods/gen_tex.png" id="19_6tx0c"]
@@ -50,11 +31,27 @@
 [ext_resource type="PackedScene" uid="uid://r7solpbmagx8" path="res://Crows.tscn" id="20_6tx0c"]
 [ext_resource type="Texture2D" uid="uid://cle1f12aavn5g" path="res://Images/jail/texture1.png" id="21_0to5b"]
 [ext_resource type="ArrayMesh" uid="uid://bxwbwhwcg2d2i" path="res://Images/mining/mining.obj" id="21_5j71u"]
+[ext_resource type="Script" uid="uid://b5wb5gnw6fvi1" path="res://Scripts/NPC_Scripts/npc.gd" id="21_jyqkj"]
+[ext_resource type="Texture2D" uid="uid://py6vdfspx4ov" path="res://Character Sprites/Farmer.PNG" id="22_c2gv2"]
 [ext_resource type="Texture2D" uid="uid://b0xrhmu5m5kr6" path="res://Images/mining/texture1.png" id="22_jyqkj"]
+[ext_resource type="Texture2D" uid="uid://bo632vycu4pot" path="res://Character Sprites/Undertaker.PNG" id="24_rp4qs"]
+[ext_resource type="Script" uid="uid://bchdrk5lqv12m" path="res://Character Sprites/undertaker_sprite.gd" id="25_gtthi"]
+[ext_resource type="Texture2D" uid="uid://1tl57v47ultx" path="res://Character Sprites/Mayor.PNG" id="25_rhl3w"]
+[ext_resource type="Texture2D" uid="uid://xhg3sb757a08" path="res://Character Sprites/Sheriff.PNG" id="26_bun23"]
 [ext_resource type="Texture2D" uid="uid://c43sv5vrcltox" path="res://Images/out2/texture2.png" id="26_c2gv2"]
+[ext_resource type="Texture2D" uid="uid://bbcs5pcthq1v2" path="res://Character Sprites/School Marm.PNG" id="27_gtthi"]
+[ext_resource type="Script" uid="uid://ba0pmnrlbtdcg" path="res://Character Sprites/mayor_sprite.gd" id="27_mnkyj"]
 [ext_resource type="Texture2D" uid="uid://cabh84ii2c3hi" path="res://Images/out2/texture3.png" id="27_rp4qs"]
+[ext_resource type="Script" uid="uid://dmp7bte11wluy" path="res://Scripts/NPC_Scripts/sheriff.gd" id="29_mnkyj"]
+[ext_resource type="Script" uid="uid://bm3mkqrjsbnj" path="res://Scripts/NPC_Scripts/schoolmarm.gd" id="30_gtthi"]
+[ext_resource type="Script" uid="uid://bg6xpidakdqgf" path="res://Scripts/NPC_Scripts/salami_sprite.gd" id="31_6xgc5"]
+[ext_resource type="Texture2D" uid="uid://devgugqs2rrqe" path="res://Character Sprites/Johnny Salami.PNG" id="32_fif40"]
+[ext_resource type="Texture2D" uid="uid://dibpyor8omew0" path="res://Character Sprites/Banker.PNG" id="34_yktx5"]
+[ext_resource type="Texture2D" uid="uid://dxeuov0u6qalo" path="res://Character Sprites/Nun.PNG" id="35_88f54"]
 [ext_resource type="ArrayMesh" uid="uid://djyikllef3r4j" path="res://Images/Tombstone 1.obj" id="35_fsfaj"]
+[ext_resource type="Texture2D" uid="uid://dgber1mj8u1xn" path="res://Character Sprites/Blacksmith.PNG" id="36_s3rcb"]
 [ext_resource type="Texture2D" uid="uid://c5c5rcevomrvj" path="res://Images/tomb.png" id="36_yktx5"]
+[ext_resource type="Texture2D" uid="uid://dn46i6qdp0nv" path="res://Character Sprites/Salesman.PNG" id="37_wf24g"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -158,6 +155,7 @@ texture_filter = 0
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_cvq6i"]
 height = 3.42896
 radius = 3.1167
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aj1ai"]
 albedo_texture = ExtResource("20_5j71u")
 texture_filter = 0
@@ -901,7 +899,6 @@ script = ExtResource("21_jyqkj")
 [node name="Ms Lady" type="Sprite3D" parent="NPCs/Miss_Lady"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
 texture = ExtResource("3_bcbcq")
-script = ExtResource("19_0to5b")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Miss_Lady"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.127, 0, -9.72901)
@@ -917,7 +914,6 @@ script = ExtResource("21_jyqkj")
 [node name="Farmer Sprite" type="Sprite3D" parent="NPCs/Farmer"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
 texture = ExtResource("22_c2gv2")
-script = ExtResource("21_5j71u")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Farmer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
@@ -1069,6 +1065,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Blacksmith/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
+
 [node name="Crows" parent="." instance=ExtResource("20_6tx0c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.2248, 0.970268, -35.4567)
 
