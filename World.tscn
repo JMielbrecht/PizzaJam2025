@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=84 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
@@ -50,13 +50,9 @@
 [ext_resource type="Script" uid="uid://cyrfn87pw50ju" path="res://Scripts/NPC_Scripts/banker.gd" id="31_m21jb"]
 [ext_resource type="Texture2D" uid="uid://devgugqs2rrqe" path="res://Character Sprites/Johnny Salami.PNG" id="32_fif40"]
 [ext_resource type="Texture2D" uid="uid://dibpyor8omew0" path="res://Character Sprites/Banker.PNG" id="34_yktx5"]
-[ext_resource type="Texture2D" uid="uid://dxeuov0u6qalo" path="res://Character Sprites/Nun.PNG" id="35_88f54"]
 [ext_resource type="ArrayMesh" uid="uid://djyikllef3r4j" path="res://Images/Tombstone 1.obj" id="35_fsfaj"]
-[ext_resource type="Script" uid="uid://bd2hm8di3oojq" path="res://Scripts/NPC_Scripts/nun.gd" id="35_k3wwj"]
 [ext_resource type="Texture2D" uid="uid://dgber1mj8u1xn" path="res://Character Sprites/Blacksmith.PNG" id="36_s3rcb"]
 [ext_resource type="Texture2D" uid="uid://c5c5rcevomrvj" path="res://Images/tomb.png" id="36_yktx5"]
-[ext_resource type="Texture2D" uid="uid://dn46i6qdp0nv" path="res://Character Sprites/Salesman.PNG" id="37_wf24g"]
-[ext_resource type="Script" uid="uid://ce7ifq3frn2dw" path="res://Scripts/NPC_Scripts/salesman.gd" id="39_ybp5j"]
 [ext_resource type="Script" uid="uid://bwu718jvnsmgo" path="res://Scripts/NPC_Scripts/blacksmith.gd" id="40_s3kwu"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
@@ -978,22 +974,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
-[node name="Nun" type="Node3D" parent="NPCs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4043, 0, -11.3749)
-script = ExtResource("21_jyqkj")
-
-[node name="Nun Sprite" type="Sprite3D" parent="NPCs/Nun"]
-transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("35_88f54")
-script = ExtResource("35_k3wwj")
-
-[node name="Area3D" type="Area3D" parent="NPCs/Nun"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Nun/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
-shape = SubResource("CylinderShape3D_cvq6i")
-
 [node name="Sheriff" type="Node3D" parent="NPCs"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, -5.43147)
 script = ExtResource("21_jyqkj")
@@ -1039,22 +1019,6 @@ script = ExtResource("30_gtthi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Schoolmarm/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
-shape = SubResource("CylinderShape3D_cvq6i")
-
-[node name="Salesman" type="Node3D" parent="NPCs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0195999, 0, 14.2283)
-script = ExtResource("21_jyqkj")
-
-[node name="Salesman Sprite" type="Sprite3D" parent="NPCs/Salesman"]
-transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("37_wf24g")
-script = ExtResource("39_ybp5j")
-
-[node name="Area3D" type="Area3D" parent="NPCs/Salesman"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Salesman/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
