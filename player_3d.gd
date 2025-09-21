@@ -26,6 +26,7 @@ var camera_rotation : Vector3
 
 var chamber: int = 6
 @onready var chamber_label = HUD.get_node("ChamberCount")
+@onready var reload_label = HUD.get_node("Reload")
 
 var can_move : bool = true
 
@@ -57,12 +58,12 @@ func _update_camera(delta):
 	CAMERA_CONTROLLER.transform.basis = Basis.from_euler(camera_rotation)
 	CAMERA_CONTROLLER.rotation.z = 0.0
 	# Turn raycast towards movement direction
-	if $RayCast3D:
-		var camera_global_transform = CAMERA_CONTROLLER.global_transform
-		var raycast_origin = camera_global_transform.origin
-		var raycast_target = raycast_origin + camera_global_transform.basis.z * -2.0 # forward in -Z
-		$RayCast3D.global_position = raycast_origin
-		$RayCast3D.target_position = raycast_target - raycast_origin  # Set local target direction
+	#if $RayCast3D:
+		#var camera_global_transform = CAMERA_CONTROLLER.global_transform
+		#var raycast_origin = camera_global_transform.origin
+		#var raycast_target = raycast_origin + camera_global_transform.basis.z * -2.0 # forward in -Z
+		#$RayCast3D.global_position = raycast_origin
+		#$RayCast3D.target_position = raycast_target - raycast_origin  # Set local target direction
 	
 	global_transform.basis = Basis.from_euler(player_rotation)
 	
@@ -104,6 +105,7 @@ func _physics_process(delta):
 	
 	
 	if chamber > 0:
+		reload_label.text = ""
 		if Input.is_action_just_pressed("shoot"):
 			var inst = bullet_inst.instantiate()
 			inst.position = bullet_spawn_pos.global_position
@@ -117,6 +119,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("reload"):
 			chamber = 6
 			chamber_label.text = str(chamber)
+		reload_label.text = "Press R to Reload..."
 	
 	
 	
