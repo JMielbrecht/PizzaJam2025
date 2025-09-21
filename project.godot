@@ -88,7 +88,7 @@ ui_interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/farmer_dialogue.dialogue", "res://Dialogue/mistress_dialogue.dialogue", "res://Dialogue/mayor_dialogue.dialogue", "res://Dialogue/undertaker_dialogue.dialogue", "res://Dialogue/outlaw_dialogue.dialogue", "res://Dialogue/example_dialogue.dialogue", "res://Dialogue/teacher_dialogue.dialogue", "res://Dialogue/salami_dialogue.dialogue", "res://Dialogue/schoolmarm_dialogue.dialogue", "res://Dialogue/sheriff_dialogue.dialogue", "res://Dialogue/miner_dialogue.dialogue", "res://Dialogue/salty_gang_goon_1.dialogue", "res://Dialogue/salty_gang_goon_2.dialogue", "res://Dialogue/salesman_dialogue.dialogue", "res://Dialogue/banker_dialogue.dialogue", "res://Dialogue/blacksmith_dialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/farmer_dialogue.dialogue", "res://Dialogue/mistress_dialogue.dialogue", "res://Dialogue/mayor_dialogue.dialogue", "res://Dialogue/undertaker_dialogue.dialogue", "res://Dialogue/outlaw_dialogue.dialogue", "res://Dialogue/example_dialogue.dialogue", "res://Dialogue/teacher_dialogue.dialogue", "res://Dialogue/salami_dialogue.dialogue", "res://Dialogue/schoolmarm_dialogue.dialogue", "res://Dialogue/sheriff_dialogue.dialogue", "res://Dialogue/miner_dialogue.dialogue", "res://Dialogue/salty_gang_goon_1.dialogue", "res://Dialogue/salty_gang_goon_2.dialogue", "res://Dialogue/salesman_dialogue.dialogue", "res://Dialogue/banker_dialogue.dialogue", "res://Dialogue/blacksmith_dialogue.dialogue", "res://showdown.dialogue")
 
 [layer_names]
 

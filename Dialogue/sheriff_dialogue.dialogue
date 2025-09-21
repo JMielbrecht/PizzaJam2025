@@ -40,3 +40,11 @@ Sheriff: But look at me! How am I supposed to stop them!
 %
 => END
 ~ after_help
+The Sheriff: Howdy partner.
+The Sheriff: I’ve been eyeing you helping out the townsfolk here. That’s mighty kind of you.
+The Sheriff: And WOWEE the way you handle that six shooter is top-ace.
+The Sheriff: Gosh, it’s hard to say but I was wonderin’ if you would help out the town with just one more thing.
+The Sheriff: I’ve tried my darndest, but I just cannot put an end to Johnny Salami and doggone it I need help.
+The Sheriff: We could set you up right in the middle of town, so when the Salty Gang comes in you can be all ready for them.
+The Sheriff: What do you say?
+=> END

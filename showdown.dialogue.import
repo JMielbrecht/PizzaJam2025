@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://crkloytxab8vk"
+path="res://.godot/imported/showdown.dialogue-d068ad69e45d7b416e45a43d3c900a80.tres"
+
+[deps]
+
+source_file="res://showdown.dialogue"
+dest_files=["res://.godot/imported/showdown.dialogue-d068ad69e45d7b416e45a43d3c900a80.tres"]
+
+[params]
+
+defaults=true
