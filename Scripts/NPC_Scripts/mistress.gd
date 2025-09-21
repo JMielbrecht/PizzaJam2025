@@ -9,7 +9,6 @@ func _ready():
 
 func start_dialog():
 	if (DialogueManager.dialogue_started):
-		print("STAAAARRRRRT")
 		GlobalData.talking_to_npc = true
 		
 	print("Lady talking")
