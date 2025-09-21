@@ -939,7 +939,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.186188, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
 [node name="Farmer" type="Node3D" parent="NPCs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8352, 0.688014, 17.0321)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8352, 0.0343017, 17.0321)
 script = ExtResource("21_jyqkj")
 
 [node name="Farmer Sprite" type="Sprite3D" parent="NPCs/Farmer"]
