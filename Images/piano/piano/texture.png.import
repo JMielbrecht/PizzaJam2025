@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjdl4k5shgwsi"
-path.s3tc="res://.godot/imported/texture.png-2e873e7f74b9dbfcbaf3feeb007b1526.s3tc.ctex"
+uid="uid://8xj75mcguxhp"
+path.s3tc="res://.godot/imported/texture.png-63cd6bf3a1142f9b0aafa0141af78ad1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Images/ghost piano hanging/texture.png"
-dest_files=["res://.godot/imported/texture.png-2e873e7f74b9dbfcbaf3feeb007b1526.s3tc.ctex"]
+source_file="res://Images/piano/piano/texture.png"
+dest_files=["res://.godot/imported/texture.png-63cd6bf3a1142f9b0aafa0141af78ad1.s3tc.ctex"]
 
 [params]
 
