@@ -824,7 +824,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
 [node name="Farmer" type="Node3D" parent="NPCs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4839, 0.603877, 17.2039)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8352, 0.688014, 17.0321)
 script = ExtResource("21_jyqkj")
 
 [node name="Farmer Sprite" type="Sprite3D" parent="NPCs/Farmer"]
@@ -871,6 +871,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
+[node name="Banker" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.58942, 0, -4.57758)
+script = ExtResource("21_jyqkj")
+
+[node name="Banker Sprite" type="Sprite3D" parent="NPCs/Banker"]
+transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
+texture = ExtResource("34_yktx5")
+script = ExtResource("31_6xgc5")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Banker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Banker/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
+shape = SubResource("CylinderShape3D_cvq6i")
+
+[node name="Nun" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4043, 0, -11.3749)
+script = ExtResource("21_jyqkj")
+
+[node name="Nun Sprite" type="Sprite3D" parent="NPCs/Nun"]
+transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
+texture = ExtResource("35_88f54")
+script = ExtResource("31_6xgc5")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Nun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Nun/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
+shape = SubResource("CylinderShape3D_cvq6i")
+
 [node name="Sheriff" type="Node3D" parent="NPCs"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, -5.43147)
 script = ExtResource("21_jyqkj")
@@ -884,22 +916,6 @@ script = ExtResource("29_mnkyj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Sheriff/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
-shape = SubResource("CylinderShape3D_cvq6i")
-
-[node name="Schoolmarm" type="Node3D" parent="NPCs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, 8.33552)
-script = ExtResource("21_jyqkj")
-
-[node name="Schoolmarm Sprite" type="Sprite3D" parent="NPCs/Schoolmarm"]
-transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("27_gtthi")
-script = ExtResource("30_gtthi")
-
-[node name="Area3D" type="Area3D" parent="NPCs/Schoolmarm"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Schoolmarm/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
@@ -919,66 +935,50 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
-[node name="Banker" type="Node3D" parent="NPCs/JohnnySalami"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, -10.4704)
+[node name="Schoolmarm" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, 8.33552)
 script = ExtResource("21_jyqkj")
 
-[node name="Banker Sprite" type="Sprite3D" parent="NPCs/JohnnySalami/Banker"]
+[node name="Schoolmarm Sprite" type="Sprite3D" parent="NPCs/Schoolmarm"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("34_yktx5")
-script = ExtResource("31_6xgc5")
+texture = ExtResource("27_gtthi")
+script = ExtResource("30_gtthi")
 
-[node name="Area3D" type="Area3D" parent="NPCs/JohnnySalami/Banker"]
+[node name="Area3D" type="Area3D" parent="NPCs/Schoolmarm"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/JohnnySalami/Banker/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Schoolmarm/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
-[node name="Nun" type="Node3D" parent="NPCs/JohnnySalami"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2267, 0, -17.2677)
+[node name="Salesman" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0195999, 0, 14.2283)
 script = ExtResource("21_jyqkj")
 
-[node name="Nun Sprite" type="Sprite3D" parent="NPCs/JohnnySalami/Nun"]
-transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("35_88f54")
-script = ExtResource("31_6xgc5")
-
-[node name="Area3D" type="Area3D" parent="NPCs/JohnnySalami/Nun"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/JohnnySalami/Nun/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
-shape = SubResource("CylinderShape3D_cvq6i")
-
-[node name="Blacksmith" type="Node3D" parent="NPCs/JohnnySalami"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, -18.6386)
-script = ExtResource("21_jyqkj")
-
-[node name="Blacksmith Sprite" type="Sprite3D" parent="NPCs/JohnnySalami/Blacksmith"]
-transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("36_s3rcb")
-script = ExtResource("31_6xgc5")
-
-[node name="Area3D" type="Area3D" parent="NPCs/JohnnySalami/Blacksmith"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/JohnnySalami/Blacksmith/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
-shape = SubResource("CylinderShape3D_cvq6i")
-
-[node name="Salesman" type="Node3D" parent="NPCs/JohnnySalami"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.80275, 0, 8.33552)
-script = ExtResource("21_jyqkj")
-
-[node name="Salesman Sprite" type="Sprite3D" parent="NPCs/JohnnySalami/Salesman"]
+[node name="Salesman Sprite" type="Sprite3D" parent="NPCs/Salesman"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
 texture = ExtResource("37_wf24g")
 script = ExtResource("31_6xgc5")
 
-[node name="Area3D" type="Area3D" parent="NPCs/JohnnySalami/Salesman"]
+[node name="Area3D" type="Area3D" parent="NPCs/Salesman"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/JohnnySalami/Salesman/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Salesman/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
+shape = SubResource("CylinderShape3D_cvq6i")
+
+[node name="Blacksmith" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.58942, 0, -12.7458)
+script = ExtResource("21_jyqkj")
+
+[node name="Blacksmith Sprite" type="Sprite3D" parent="NPCs/Blacksmith"]
+transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
+texture = ExtResource("36_s3rcb")
+script = ExtResource("31_6xgc5")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Blacksmith"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Blacksmith/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
