@@ -5,11 +5,15 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jn4mh"]
 shader = ExtResource("1_xcvsv")
-shader_parameter/pixel_size = 6
+shader_parameter/pixel_size = 4
 shader_parameter/screen_size = Vector2(1920, 1080)
 
 [sub_resource type="LabelSettings" id="LabelSettings_21nno"]
 font_size = 102
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xcvsv"]
+font_size = 31
 font_color = Color(0, 0, 0, 1)
 
 [node name="HUD" type="Control"]
@@ -80,3 +84,14 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_jn4mh")
 theme_override_font_sizes/font_size = 32
 text = "Press \"E\" to Interact"
+[node name="Reload" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -150.0
+offset_right = 287.0
+offset_bottom = -46.0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_xcvsv")

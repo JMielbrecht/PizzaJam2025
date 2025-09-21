@@ -28,6 +28,7 @@ var camera_rotation : Vector3
 var chamber: int = 6
 @onready var chamber_label = HUD.get_node("ChamberCount")
 @onready var interact_label = HUD.get_node("InteractionLabel")
+@onready var reload_label = HUD.get_node("Reload")
 
 var can_move : bool = true
 
@@ -101,6 +102,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if chamber > 0:
+		reload_label.text = ""
 		if Input.is_action_just_pressed("shoot") && GlobalData.talking_to_npc == false:
 			print("Talking to NPC?", GlobalData.talking_to_npc)
 			var inst = bullet_inst.instantiate()
@@ -114,6 +116,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("reload"):
 			chamber = 6
 			chamber_label.text = str(chamber)
+		reload_label.text = "Press R to Reload..."
 	
 	
 	

@@ -1,0 +1,8 @@
+# Made in Blockbench 4.12.6
+newmtl m_600216a5-4478-a59a-8bb4-82042be8ac2f
+map_Kd texture1.png
+newmtl m_88f7823f-8d85-9636-802f-1a2d3ccecaee
+map_Kd texture2.png
+newmtl m_4e5b0f11-f233-0d6c-1427-b958e00f926d
+map_Kd texture3.png
+newmtl none

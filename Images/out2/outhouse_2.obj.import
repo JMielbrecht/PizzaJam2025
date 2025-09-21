@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpk4b56tehuwp"
+path="res://.godot/imported/outhouse_2.obj-d53dd7c5c91a40c9cce88964345e51f0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/outhouse_2.obj-d53dd7c5c91a40c9cce88964345e51f0.mesh"]
+
+source_file="res://Images/out2/outhouse_2.obj"
+dest_files=["res://.godot/imported/outhouse_2.obj-d53dd7c5c91a40c9cce88964345e51f0.mesh", "res://.godot/imported/outhouse_2.obj-d53dd7c5c91a40c9cce88964345e51f0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
