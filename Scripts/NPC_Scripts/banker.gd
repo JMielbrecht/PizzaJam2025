@@ -7,7 +7,10 @@ func _ready():
 	has_interacted = false
 	count = 0
 
-func start_dialog():
+func start_dialog():	
+	if (DialogueManager.dialogue_started):
+		GlobalData.talking_to_npc = true
+		
 	var resource = load("res://Dialogue/banker_dialogue.dialogue")
 	var section
 	if (has_interacted): 

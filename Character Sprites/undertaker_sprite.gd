@@ -1,16 +1,26 @@
 extends Sprite3D
 
+var has_interacted: bool
+var count: float
+
+func _ready():
+	has_interacted = false
+	count = 0
+
 func start_dialog():
-	print("Farmer talking")
+	if (DialogueManager.dialogue_started):
+		GlobalData.talking_to_npc = true
+		
 	var resource = load("res://Dialogue/undertaker_dialogue.dialogue")
-	var finishedTask = GlobalData.undertaker_task_complete
-	var dialogue_line 
-	if (finishedTask):
-		print("Talking after help")
-		dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "after_help")
+	var completed = GlobalData.undertaker_task_complete
+	var section
+	if (completed): 
+		section = "after_help"
+	elif (has_interacted):
+		section = "in_between"
 	else:
-		print("Talking before help")
-		dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
+		section = "start"
+	#var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, section)
 	
 	# then
-	DialogueManager.show_dialogue_balloon(resource)
+	DialogueManager.show_dialogue_balloon(resource, section)
