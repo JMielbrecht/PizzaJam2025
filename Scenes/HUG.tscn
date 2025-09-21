@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://t24qcbs5ndjw"]
+[gd_scene load_steps=6 format=3 uid="uid://t24qcbs5ndjw"]
 
 [ext_resource type="Shader" uid="uid://18ngnmwopxt" path="res://Scenes/canvas_shader.gdshader" id="1_xcvsv"]
 [ext_resource type="FontFile" uid="uid://dyk7lhvuhkvdb" path="res://Fonts/Pixellari.ttf" id="2_jn4mh"]
@@ -84,6 +84,7 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_jn4mh")
 theme_override_font_sizes/font_size = 32
 text = "Press \"E\" to Interact"
+
 [node name="Reload" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 2
