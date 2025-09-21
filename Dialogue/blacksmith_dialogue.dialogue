@@ -1,11 +1,13 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Blacksmith: A stranger, huh? Pleasure to meet ya. 
+Blacksmith: I, uh, ain’t much for good company. 
+Blacksmith: You’ll get better luck with my lady over in the saloon. 
+Blacksmith: … I’m the Blacksmith, by the way. If you couldn’t tell. 
+
 => END
+
+~ random
+Blacksmith: You gone to see my lady yet? 
+Blacksmith: She’s always fussin’ over that saloon. 
+Blacksmith: Silly thing to fuss over, but I s’pose it keeps morale up for the townsfolk. 
+Blacksmith: Ain’t she a sweetie for doing that? 

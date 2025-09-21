@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=84 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
@@ -52,6 +52,8 @@
 [ext_resource type="Texture2D" uid="uid://dgber1mj8u1xn" path="res://Character Sprites/Blacksmith.PNG" id="36_s3rcb"]
 [ext_resource type="Texture2D" uid="uid://c5c5rcevomrvj" path="res://Images/tomb.png" id="36_yktx5"]
 [ext_resource type="Texture2D" uid="uid://dn46i6qdp0nv" path="res://Character Sprites/Salesman.PNG" id="37_wf24g"]
+[ext_resource type="Script" uid="uid://ce7ifq3frn2dw" path="res://Scripts/NPC_Scripts/salesman.gd" id="39_ybp5j"]
+[ext_resource type="Script" uid="uid://bwu718jvnsmgo" path="res://Scripts/NPC_Scripts/blacksmith.gd" id="40_s3kwu"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -1041,7 +1043,7 @@ script = ExtResource("21_jyqkj")
 [node name="Salesman Sprite" type="Sprite3D" parent="NPCs/Salesman"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
 texture = ExtResource("37_wf24g")
-script = ExtResource("31_6xgc5")
+script = ExtResource("39_ybp5j")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Salesman"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
@@ -1057,7 +1059,7 @@ script = ExtResource("21_jyqkj")
 [node name="Blacksmith Sprite" type="Sprite3D" parent="NPCs/Blacksmith"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
 texture = ExtResource("36_s3rcb")
-script = ExtResource("31_6xgc5")
+script = ExtResource("40_s3kwu")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Blacksmith"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
