@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=75 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
@@ -9,14 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://cwxhi6wrs2l63" path="res://Images/church/church texture.png" id="5_cvq6i"]
 [ext_resource type="PackedScene" uid="uid://8nfxae8e1qv0" path="res://Scenes/Parry.tscn" id="6_p1v5b"]
 [ext_resource type="ArrayMesh" uid="uid://mevjorgijxk1" path="res://Images/out1/outhouse_1.obj" id="9_jyqkj"]
-[ext_resource type="Texture2D" uid="uid://co0f5dljudc43" path="res://Images/out1/outtexture.png" id="10_ydbc3"]
 [ext_resource type="PackedScene" uid="uid://c1x6s5swflc0q" path="res://Scenes/book.tscn" id="11_6w02q"]
-[ext_resource type="Texture2D" uid="uid://cus86vt8sq4pc" path="res://Images/out2/texture1.png" id="11_aj1ai"]
 [ext_resource type="ArrayMesh" uid="uid://cpk4b56tehuwp" path="res://Images/out2/outhouse_2.obj" id="12_d7dfr"]
 [ext_resource type="ArrayMesh" uid="uid://cow000rrfw5id" path="res://Images/saloon.obj" id="12_f5c0m"]
 [ext_resource type="Texture2D" uid="uid://dv1cfwa3tc8ej" path="res://Images/Dirt Cloud/IMG_2608.PNG" id="13_gtthi"]
 [ext_resource type="ArrayMesh" uid="uid://8wkyd31vtxo5" path="res://Images/Cactus.obj" id="14_ee7l0"]
 [ext_resource type="Texture2D" uid="uid://bsyeiu6v3okna" path="res://Images/Dirt Cloud/IMG_2609.PNG" id="14_mnkyj"]
+[ext_resource type="Script" uid="uid://bxxek363qif5u" path="res://Scripts/NPC_Scripts/skeleton.gd" id="14_ybp5j"]
 [ext_resource type="Texture2D" uid="uid://c3cf7kxxvpvmm" path="res://Images/Dirt Cloud/IMG_2610.PNG" id="15_fif40"]
 [ext_resource type="AudioStream" uid="uid://cwjpcld363g2x" path="res://Audio/western theme.wav" id="15_gn8l5"]
 [ext_resource type="Texture2D" uid="uid://d3b7xqm41q3qq" path="res://Images/Dirt Cloud/IMG_2611.PNG" id="16_6xgc5"]
@@ -27,46 +26,34 @@
 [ext_resource type="Texture2D" uid="uid://c1mrs5h5xabyx" path="res://Images/Doggo.PNG" id="19_6xgc5"]
 [ext_resource type="ArrayMesh" uid="uid://45mhhrodawxq" path="res://Images/jail/sheriff.obj" id="20_0to5b"]
 [ext_resource type="Texture2D" uid="uid://d2x85rnhwpm5w" path="res://Images/skelton.PNG" id="20_0vv3x"]
-[ext_resource type="Texture2D" uid="uid://y8fakfq4oxnp" path="res://Images/hard/hard_texture.png" id="20_5j71u"]
 [ext_resource type="PackedScene" uid="uid://r7solpbmagx8" path="res://Crows.tscn" id="20_6tx0c"]
-[ext_resource type="Texture2D" uid="uid://cle1f12aavn5g" path="res://Images/jail/texture1.png" id="21_0to5b"]
 [ext_resource type="ArrayMesh" uid="uid://bxwbwhwcg2d2i" path="res://Images/mining/mining.obj" id="21_5j71u"]
 [ext_resource type="Script" uid="uid://b5wb5gnw6fvi1" path="res://Scripts/NPC_Scripts/npc.gd" id="21_jyqkj"]
 [ext_resource type="Texture2D" uid="uid://py6vdfspx4ov" path="res://Character Sprites/Farmer.PNG" id="22_c2gv2"]
-[ext_resource type="Texture2D" uid="uid://b0xrhmu5m5kr6" path="res://Images/mining/texture1.png" id="22_jyqkj"]
 [ext_resource type="Texture2D" uid="uid://bo632vycu4pot" path="res://Character Sprites/Undertaker.PNG" id="24_rp4qs"]
 [ext_resource type="Script" uid="uid://bchdrk5lqv12m" path="res://Character Sprites/undertaker_sprite.gd" id="25_gtthi"]
 [ext_resource type="Texture2D" uid="uid://1tl57v47ultx" path="res://Character Sprites/Mayor.PNG" id="25_rhl3w"]
 [ext_resource type="Script" uid="uid://b38pupy5b1t7f" path="res://Scripts/NPC_Scripts/mistress.gd" id="25_tlk5t"]
 [ext_resource type="Texture2D" uid="uid://xhg3sb757a08" path="res://Character Sprites/Sheriff.PNG" id="26_bun23"]
-[ext_resource type="Texture2D" uid="uid://c43sv5vrcltox" path="res://Images/out2/texture2.png" id="26_c2gv2"]
 [ext_resource type="Texture2D" uid="uid://bbcs5pcthq1v2" path="res://Character Sprites/School Marm.PNG" id="27_gtthi"]
-[ext_resource type="Script" uid="uid://bgutijjkqikhr" path="res://Scripts/NPC_Scripts/farmer.gd" id="27_k3wwj"]
+[ext_resource type="Script" path="res://Scripts/NPC_Scripts/farmer.gd" id="27_k3wwj"]
 [ext_resource type="Script" uid="uid://ba0pmnrlbtdcg" path="res://Character Sprites/mayor_sprite.gd" id="27_mnkyj"]
-[ext_resource type="Texture2D" uid="uid://cabh84ii2c3hi" path="res://Images/out2/texture3.png" id="27_rp4qs"]
-[ext_resource type="Script" uid="uid://dmp7bte11wluy" path="res://Scripts/NPC_Scripts/sheriff.gd" id="29_mnkyj"]
-[ext_resource type="Script" uid="uid://bm3mkqrjsbnj" path="res://Scripts/NPC_Scripts/schoolmarm.gd" id="30_gtthi"]
-[ext_resource type="Script" uid="uid://cyrfn87pw50ju" path="res://Scripts/NPC_Scripts/banker.gd" id="31_m21jb"]
+[ext_resource type="Script" path="res://Scripts/NPC_Scripts/sheriff.gd" id="29_mnkyj"]
+[ext_resource type="Script" path="res://Scripts/NPC_Scripts/schoolmarm.gd" id="30_gtthi"]
+[ext_resource type="Script" path="res://Scripts/NPC_Scripts/banker.gd" id="31_m21jb"]
 [ext_resource type="Texture2D" uid="uid://devgugqs2rrqe" path="res://Character Sprites/Johnny Salami.PNG" id="32_fif40"]
 [ext_resource type="Texture2D" uid="uid://dibpyor8omew0" path="res://Character Sprites/Banker.PNG" id="34_yktx5"]
 [ext_resource type="ArrayMesh" uid="uid://djyikllef3r4j" path="res://Images/Tombstone 1.obj" id="35_fsfaj"]
 [ext_resource type="Texture2D" uid="uid://dgber1mj8u1xn" path="res://Character Sprites/Blacksmith.PNG" id="36_s3rcb"]
-[ext_resource type="Script" uid="uid://bwu718jvnsmgo" path="res://Scripts/NPC_Scripts/blacksmith.gd" id="40_s3kwu"]
+[ext_resource type="Script" path="res://Scripts/NPC_Scripts/blacksmith.gd" id="40_s3kwu"]
 [ext_resource type="Texture2D" uid="uid://c8t1jhd8m82wq" path="res://Character Sprites/Miner.PNG" id="42_ataof"]
-[ext_resource type="Script" uid="uid://djh3md8afcyhq" path="res://Scripts/NPC_Scripts/miner_sprite.gd" id="42_jd6tb"]
-[ext_resource type="Texture2D" uid="uid://ciq6jr01vntum" path="res://Images/texture.png" id="58_xke13"]
+[ext_resource type="Script" path="res://Scripts/NPC_Scripts/miner_sprite.gd" id="42_jd6tb"]
 [ext_resource type="ArrayMesh" uid="uid://4x57xkxy15w6" path="res://Images/school/schol.obj" id="59_4s2lh"]
-[ext_resource type="Texture2D" uid="uid://buk7c7dedyxhu" path="res://Images/school/texture.png" id="60_i3ffs"]
 [ext_resource type="ArrayMesh" uid="uid://c1f5pm31ekmay" path="res://Images/undert/undertaker.obj" id="61_7470a"]
-[ext_resource type="Texture2D" uid="uid://chrkie7hool6h" path="res://Images/undert/texture.png" id="62_nrxlq"]
 [ext_resource type="ArrayMesh" uid="uid://c7yi785b3hbdg" path="res://Images/bank/bank.obj" id="63_bdxe7"]
-[ext_resource type="Texture2D" uid="uid://dgkaxpla71e1l" path="res://Images/bank/texture.png" id="64_g4y68"]
 [ext_resource type="ArrayMesh" uid="uid://blomy4yjvockj" path="res://Images/piano/piano_alive.obj" id="65_3chcu"]
-[ext_resource type="Texture2D" uid="uid://drqvauhtfi7ci" path="res://Images/piano/texture.png" id="66_jd6tb"]
 [ext_resource type="ArrayMesh" uid="uid://ck46mcnfygphg" path="res://Images/barn/barn.obj" id="67_ataof"]
-[ext_resource type="Texture2D" uid="uid://cvijkceooa2x2" path="res://Images/barn/texture.png" id="68_ngx0x"]
 [ext_resource type="ArrayMesh" uid="uid://dsf8h5lrjk2h5" path="res://Images/town hall.obj" id="69_ngx0x"]
-[ext_resource type="Texture2D" uid="uid://k200wdc552nb" path="res://Images/graph.png" id="70_uu84e"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -129,9 +116,9 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn8l5"]
 albedo_color = Color(9.62615e-07, 0.381347, 0.175548, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rp4qs"]
-albedo_texture = ExtResource("10_ydbc3")
-texture_filter = 0
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_s3kwu"]
+height = 5.73535
+radius = 2.77588
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c2gv2"]
 animations = [{
@@ -165,63 +152,6 @@ texture_filter = 0
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_cvq6i"]
 height = 3.42896
 radius = 3.1167
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aj1ai"]
-albedo_texture = ExtResource("20_5j71u")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d7dfr"]
-albedo_texture = ExtResource("21_0to5b")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2gv2"]
-albedo_texture = ExtResource("22_jyqkj")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhl3w"]
-albedo_texture = ExtResource("11_aj1ai")
-uv1_offset = Vector3(0.025, 0, 0)
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bun23"]
-albedo_texture = ExtResource("26_c2gv2")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gtthi"]
-albedo_texture = ExtResource("27_rp4qs")
-uv1_offset = Vector3(0.025, 0, 0)
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88f54"]
-albedo_texture = ExtResource("58_xke13")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7470a"]
-albedo_texture = ExtResource("60_i3ffs")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrxlq"]
-albedo_color = Color(0.172833, 0.172833, 0.172833, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bdxe7"]
-albedo_texture = ExtResource("62_nrxlq")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3chcu"]
-albedo_texture = ExtResource("64_g4y68")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ataof"]
-albedo_texture = ExtResource("66_jd6tb")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xke13"]
-albedo_texture = ExtResource("68_ngx0x")
-texture_filter = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fngsu"]
-albedo_texture = ExtResource("70_uu84e")
-texture_filter = 0
 
 [node name="Node3D" type="Node3D"]
 
@@ -850,9 +780,6 @@ transform = Transform3D(0.699507, 0, 0, 0, 0.699507, 0, 0, 0, 0.699507, 29.3991,
 [node name="Outhouse1" type="MeshInstance3D" parent="Buildings"]
 transform = Transform3D(3.17041, 0, -3.86633, 0, 5, 0, 3.86633, 0, 3.17041, 25.8994, 1.82302, -29.6757)
 mesh = ExtResource("9_jyqkj")
-surface_material_override/0 = SubResource("StandardMaterial3D_rp4qs")
-surface_material_override/1 = SubResource("StandardMaterial3D_rp4qs")
-surface_material_override/2 = SubResource("StandardMaterial3D_rp4qs")
 
 [node name="HUD" parent="." instance=ExtResource("4_js7pq")]
 unique_name_in_owner = true
@@ -872,12 +799,23 @@ modulate = Color(1, 1, 1, 0)
 billboard = 2
 texture = ExtResource("19_6xgc5")
 
-[node name="SkeletonSprite" type="Sprite3D" parent="DustNode"]
+[node name="Skeleton" type="Node3D" parent="DustNode"]
+script = ExtResource("21_jyqkj")
+
+[node name="SkeletonSprite" type="Sprite3D" parent="DustNode/Skeleton"]
 unique_name_in_owner = true
-transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0.911148, -1.61806, 0.0268917)
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0.911148, -1.61806, 0.026886)
 modulate = Color(1, 1, 1, 0)
 billboard = 2
 texture = ExtResource("20_0vv3x")
+script = ExtResource("14_ybp5j")
+
+[node name="Area3D" type="Area3D" parent="DustNode/Skeleton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.3163, -2.73415, 185.908)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DustNode/Skeleton/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.0781, 1.98705, -186.49)
+shape = SubResource("CylinderShape3D_s3kwu")
 
 [node name="bone1" parent="DustNode" instance=ExtResource("6_p1v5b")]
 transform = Transform3D(0.99325, 0, 0.115995, 0, 1, 0, -0.115995, 0, 0.99325, -0.123993, -0.49014, 0.0467224)
@@ -1094,46 +1032,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.2861, 0.970267, -51.727)
 [node name="HardwareStore" type="MeshInstance3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 37.8241, 2.45561, -128.319)
 mesh = ExtResource("19_0to5b")
-surface_material_override/0 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/1 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/2 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/3 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/4 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/5 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/6 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/7 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/8 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/9 = SubResource("StandardMaterial3D_aj1ai")
-surface_material_override/10 = SubResource("StandardMaterial3D_aj1ai")
 
 [node name="Sheriff" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.99381, 0, 0.24869, 0, 5, 0, -0.24869, 0, -4.99381, 18.7033, 2.94373, -131.564)
 mesh = ExtResource("20_0to5b")
-surface_material_override/0 = SubResource("StandardMaterial3D_d7dfr")
-surface_material_override/1 = SubResource("StandardMaterial3D_d7dfr")
-surface_material_override/2 = SubResource("StandardMaterial3D_d7dfr")
-surface_material_override/3 = SubResource("StandardMaterial3D_d7dfr")
-surface_material_override/4 = SubResource("StandardMaterial3D_d7dfr")
-surface_material_override/5 = SubResource("StandardMaterial3D_d7dfr")
-surface_material_override/6 = SubResource("StandardMaterial3D_d7dfr")
-surface_material_override/7 = SubResource("StandardMaterial3D_d7dfr")
 
 [node name="Mining" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.90657, 0, -3.12069, 0, 5, 0, 3.12069, 0, 3.90657, 34.0528, 1.81301, -24.5064)
 mesh = ExtResource("21_5j71u")
-surface_material_override/0 = SubResource("StandardMaterial3D_c2gv2")
-surface_material_override/1 = SubResource("StandardMaterial3D_c2gv2")
-surface_material_override/2 = SubResource("StandardMaterial3D_c2gv2")
-surface_material_override/3 = SubResource("StandardMaterial3D_c2gv2")
-surface_material_override/4 = SubResource("StandardMaterial3D_c2gv2")
-surface_material_override/5 = SubResource("StandardMaterial3D_c2gv2")
 
 [node name="Outhouse2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.986576, 0, -4.9017, 0, 5, 0, 4.9017, 0, -0.986576, 58.8757, 1.8937, -129.118)
 mesh = ExtResource("12_d7dfr")
-surface_material_override/0 = SubResource("StandardMaterial3D_rhl3w")
-surface_material_override/1 = SubResource("StandardMaterial3D_bun23")
-surface_material_override/2 = SubResource("StandardMaterial3D_gtthi")
 
 [node name="Cemetary" type="Node3D" parent="."]
 
@@ -1141,116 +1051,66 @@ surface_material_override/2 = SubResource("StandardMaterial3D_gtthi")
 transform = Transform3D(0.0220243, 0, -0.999758, 0, 1.61745, 0, 0.999758, 0, 0.0220243, 84.0711, -0.215624, -198.146)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Tombstone3" type="MeshInstance3D" parent="Cemetary"]
 transform = Transform3D(0.325601, 0, -0.945507, 0, 1, 0, 0.945507, 0, 0.325601, 79.914, -0.215625, -197.702)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Tombstone4" type="MeshInstance3D" parent="Cemetary"]
 transform = Transform3D(0.163653, 0, -0.986518, 0, 1, 0, 0.986518, 0, 0.163653, 77.4179, -0.215625, -194.387)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Tombstone5" type="MeshInstance3D" parent="Cemetary"]
 transform = Transform3D(-0.122528, 0, -0.992465, 0, 1, 0, 0.992465, 0, -0.122528, 82.0873, -0.215625, -194.307)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Tombstone6" type="MeshInstance3D" parent="Cemetary"]
 transform = Transform3D(0.107375, 0, -0.994219, 0, 1, 0, 0.994219, 0, 0.107375, 88.7162, -0.215625, -197.484)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Tombstone8" type="MeshInstance3D" parent="Cemetary"]
 transform = Transform3D(-0.191426, 0, -0.981507, 0, 1, 0, 0.981507, 0, -0.191426, 84.6515, -0.215624, -189.62)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Tombstone9" type="MeshInstance3D" parent="Cemetary"]
 transform = Transform3D(0.264445, 0, -0.964401, 0, 1, 0, 0.964401, 0, 0.264445, 79.8815, -0.215624, -189.622)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Tombstone10" type="MeshInstance3D" parent="Cemetary"]
 transform = Transform3D(0.264445, 0, -0.964401, 0, 1, 0, 0.964401, 0, 0.264445, 76.6615, -0.215624, -186.644)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Tombstone7" type="MeshInstance3D" parent="Cemetary"]
 transform = Transform3D(-0.195724, 0, -0.980659, 0, 1, 0, 0.980659, 0, -0.195724, 90.937, -0.215625, -194.387)
 mesh = ExtResource("35_fsfaj")
 skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/Node3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_88f54")
-surface_material_override/1 = SubResource("StandardMaterial3D_88f54")
 
 [node name="Schol" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.98946, 0, -0.32449, 0, 5, 0, 0.32449, 0, 4.98946, 33.9172, 3.0505, -102.657)
 mesh = ExtResource("59_4s2lh")
-surface_material_override/0 = SubResource("StandardMaterial3D_7470a")
-surface_material_override/1 = SubResource("StandardMaterial3D_nrxlq")
-surface_material_override/2 = SubResource("StandardMaterial3D_7470a")
-surface_material_override/3 = SubResource("StandardMaterial3D_7470a")
-surface_material_override/4 = SubResource("StandardMaterial3D_7470a")
-surface_material_override/5 = SubResource("StandardMaterial3D_7470a")
-surface_material_override/6 = SubResource("StandardMaterial3D_7470a")
-surface_material_override/7 = SubResource("StandardMaterial3D_7470a")
 
 [node name="Undertaker" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.43017, 0, 2.3181, 0, 5, 0, -2.3181, 0, 4.43017, 110.654, 2.59634, -140.897)
 mesh = ExtResource("61_7470a")
-surface_material_override/0 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/1 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/2 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/3 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/4 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/5 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/6 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/7 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/8 = SubResource("StandardMaterial3D_bdxe7")
-surface_material_override/9 = SubResource("StandardMaterial3D_bdxe7")
 
 [node name="Bank" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.9871, 0, -0.35888, 0, 5, 0, 0.35888, 0, 4.9871, 14.3051, 2.53438, -107.421)
 mesh = ExtResource("63_bdxe7")
-surface_material_override/0 = SubResource("StandardMaterial3D_3chcu")
-surface_material_override/1 = SubResource("StandardMaterial3D_3chcu")
-surface_material_override/2 = SubResource("StandardMaterial3D_3chcu")
-surface_material_override/3 = SubResource("StandardMaterial3D_3chcu")
-surface_material_override/4 = SubResource("StandardMaterial3D_3chcu")
-surface_material_override/5 = SubResource("StandardMaterial3D_3chcu")
-surface_material_override/6 = SubResource("StandardMaterial3D_3chcu")
-surface_material_override/7 = SubResource("StandardMaterial3D_3chcu")
-surface_material_override/8 = SubResource("StandardMaterial3D_3chcu")
 
 [node name="PianoAlive" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.10893, 0, 4.87548, 0, 5, 0, -4.87548, 0, -1.10893, 53.6795, 1.31055, -118.803)
 mesh = ExtResource("65_3chcu")
-surface_material_override/0 = SubResource("StandardMaterial3D_ataof")
-surface_material_override/1 = SubResource("StandardMaterial3D_ataof")
 
 [node name="Barn" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.96618, 0, 3.04457, 0, 5, 0, -3.04457, 0, 3.96618, 37.066, 4.76359, -177.468)
 mesh = ExtResource("67_ataof")
-surface_material_override/0 = SubResource("StandardMaterial3D_xke13")
-surface_material_override/1 = SubResource("StandardMaterial3D_xke13")
-surface_material_override/2 = SubResource("StandardMaterial3D_xke13")
 
 [node name="TownHall" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.265688, 0, 4.99294, 0, 5, 0, -4.99294, 0, 0.265688, -4.79081, 3.8283, -119.201)
@@ -1259,5 +1119,3 @@ mesh = ExtResource("69_ngx0x")
 [node name="Tombstone1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.27822, 0, 0.960517, 0, 1, 0, -0.960517, 0, 0.27822, 87.3972, -0.28405, -192.531)
 mesh = ExtResource("35_fsfaj")
-surface_material_override/0 = SubResource("StandardMaterial3D_fngsu")
-surface_material_override/1 = SubResource("StandardMaterial3D_fngsu")

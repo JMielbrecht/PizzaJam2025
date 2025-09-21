@@ -5,7 +5,7 @@ extends Node3D
 @onready var animated_sprite = %DustAnim
 
 @onready var dog = $DogSprite
-@onready var skele = $SkeletonSprite
+@onready var skele = %SkeletonSprite
 
 @export var bone1 : Node3D
 @export var bone2 : Node3D
@@ -15,7 +15,9 @@ var is_completed : bool = false
 
 var progress = 1
 var dog_skel_progress = 0
-
+var resource = preload("res://Dialogue/skeleton_dialogue.dialogue")
+				
+	
 func _physics_process(delta):
 	
 	animated_sprite.play("default")
@@ -29,6 +31,7 @@ func _physics_process(delta):
 		if bone2.is_complete:
 			if skull.is_complete:
 				is_completed = true
+				GlobalData.undertaker_task_complete
 				
 				#print("BONE COMPLETE")
 				
@@ -39,6 +42,6 @@ func _physics_process(delta):
 				
 				dog.modulate = Color(1,1,1,dog_skel_progress)
 				skele.modulate = Color(1,1,1,dog_skel_progress)
-	
-	
+				
+
 	

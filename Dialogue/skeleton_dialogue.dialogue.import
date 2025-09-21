@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dbq3dv40pxa73"
+path="res://.godot/imported/skeleton_dialogue.dialogue-c0118fecad6aaf3cd6e572baae542d23.tres"
+
+[deps]
+
+source_file="res://Dialogue/skeleton_dialogue.dialogue"
+dest_files=["res://.godot/imported/skeleton_dialogue.dialogue-c0118fecad6aaf3cd6e572baae542d23.tres"]
+
+[params]
+
+defaults=true
