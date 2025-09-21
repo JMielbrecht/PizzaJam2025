@@ -1,0 +1,28 @@
+~ start
+Miner: HEY!
+Miner: What’re ya doing out here?!.... Don’tcha’ know there are…..
+Miner: Gh-Gh-Gh-Gh-GHOSTS about?
+Miner: *Gulp*
+
+~ complete_pool
+%
+	Miner: I don't go inta Dead Gulch too much.
+	Miner: Mama says it’s haunted
+%
+
+%
+	Miner: It’s been awful hard ta get anything done in the mine.
+	Miner: The pick keeps falling through my hand!
+%
+
+%
+	Miner: The Sheriff keeps telling me town’s not as scary as I say it is.
+	Miner: But I don’t know.
+%
+
+%
+	Miner: I had some dynamite ta help with the mining.
+	Miner: But that no good Johnny Salami and his Salty Gang keeps stealing it.
+%
+
+=> END

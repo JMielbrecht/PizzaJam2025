@@ -1,7 +1,44 @@
 ~ start
-Farmer: <greeting>
-Farmer: <Some explanation about how the crows need to be scared away>
+Farmer: Howdy there, stranger. 
+Farmer: You new to Dead Gulch? Yup. Name says it all. The dead part, that is.  
+Farmer: Hm… Say, you look a little familiar… 
+Farmer: Bah, don’t mind me. My memory ain’t too good anymore. 
+Farmer: I’m the town farmer. Or used to be. My land’s all a mess nowadays. 
 => END
+
+~ in_between
+
+% Farmer: Mighty fine sidearm you got there. Why, if I had a piece like that, I’d have those birds dealt with lickity split!  
+
+% Farmer: You wonderin’ about my land? I wouldn’t bother goin’ up there. I sure don’t. 
+
+%
+	Farmer: I, uh… Look, ‘fore I kicked the bucket, I… forgot to put the straw-man in the field… Again. 
+	Farmer: Crows have been in charge of those fields ever since. 
+	Farmer: Ah, but, ain’t nothing I can do ‘bout it. On behalf of bein’ dead. 
+%
+
+
+=> END
+
 ~ after_help
-	Farmer: <gratitude for helping out, maybe something else>
+Farmer: Well, I’ll be! Those birds sure did split! That was real kind of you, stranger. 
+Farmer: … Hope there ain’t no bullets stuck in my field… 
+
 => END
+
+~ complete_pool
+%
+	Farmer: ‘Spose I should head back up to the land and get back to tillin’... 
+	Farmer: Field ain’t gonna work itself.
+%
+
+%
+	Farmer: Well, maybe I’ll hang ‘round town just a lil’ longer. 
+	Farmer: I got no need to be rushin’ to get back to work anytime soon, after all. 
+%
+
+%
+	Farmer: You should head on up the road. Ain’t a big town, but it’s nice. Plenty of folk to chat with. And we got a darn good saloon, if yer lookin’ for my onion. 
+	Farmer: Er, o-pinion. 
+%

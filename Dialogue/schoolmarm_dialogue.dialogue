@@ -26,8 +26,9 @@ School Marm: But that’s a luxury of the living. These ghostly fingers can’t 
 	School Marm: * Sigh *
 	
 ~ complete_pool
+%
 	School Marm: That little Undertaker keeps coming by to bother me.
 	School Marm: Doesn’t he know I’m not going to die anytime soon!
-
-
+%
+	% School Marm: Why are you bothering me?
 => END

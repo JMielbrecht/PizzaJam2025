@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://kp8ru3m27qqp"
+path="res://.godot/imported/sheriff_dialogue.dialogue-837aeb71d72255be24952dbd9e5aea3a.tres"
+
+[deps]
+
+source_file="res://Dialogue/sheriff_dialogue.dialogue"
+dest_files=["res://.godot/imported/sheriff_dialogue.dialogue-837aeb71d72255be24952dbd9e5aea3a.tres"]
+
+[params]
+
+defaults=true

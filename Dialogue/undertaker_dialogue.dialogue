@@ -1,6 +1,40 @@
 ~ start
-Undertaker: <greeting>
-Undertaker: <Complaint about dog digging holes>
+Undertaker: Hrmph! And who’re you supposed to be? 
+Undertaker: Some kind of gunslingin’ bogey-man? 
+Undertaker: I’ll have you know I ain’t scared of nothin’!! 
+Undertaker: Been in the company of the dead all my life and all my death!!!
+Undertaker: What’s that? You’re no reaper? Well, hrmph. I knew that.
+Undertaker: Dead Gulch Undertaker, not at your service. 
+
+~ in_between
+
+%
+	Undertaker: You best not be a troublemaker! 
+	Undertaker: Don’t you think I don’t see that piece yer carryin’! 
+	Undertaker: Mark of a no-good outlaw. Hrmph! 
+%
+
+%
+	Undertaker: Outlaws, ghosts, bah! Trouble! That’s what it all is. 
+	Undertaker: And to top it all off, that darn dog is raisin’ hell up in the graveyard!
+	Undertaker: Darn beast… And y’know what? I bet it was that blasted banker… Grrr… Pest to me in life and a pest to me in death!!
+	Undertaker: How ‘bout you make yerself useful and take that iron o’ yours up the hill and deal with that mongrel! 
+%
+
+%
+	Undertaker: Don’t touch the coffins! 
+%
+
 ~ after_help
-	Undertaker: <gratitude for helping out, maybe something else>
+	Undertaker: What have you done!!! 
+	Undertaker: The skeletons are supposed to stay in the coffins, not outta them!! You got yer head screwed on backwards or somethin’?!? 
 => END
+
+~ complete_pool
+%
+	Undertaker: Bah! Yer still here?
+	Undertaker: … 
+	Undertaker: Hrmph… At least the dog’s outta the graves… Go on, then! Get outta my sight. I got coffins to clean. Back into to town with ya. 
+%
+
+% Undertaker: Don’t you have someone else to bother? Scram! z
