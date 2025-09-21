@@ -11,7 +11,7 @@ func start_dialog():
 	if (DialogueManager.dialogue_started):
 		GlobalData.talking_to_npc = true
 		
-	var resource = load("res://Dialogue/salami_dialogue.dialogue")
+	var resource = load("res://Dialogue/miner_dialogue.dialogue")
 	var section
 	if (has_interacted): 
 		section = "random"

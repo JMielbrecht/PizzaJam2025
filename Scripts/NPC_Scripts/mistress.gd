@@ -10,9 +10,7 @@ func _ready():
 func start_dialog():
 	if (DialogueManager.dialogue_started):
 		GlobalData.talking_to_npc = true
-		
-	print("Lady talking")
-	
+
 	var resource = load("res://Dialogue/mistress_dialogue.dialogue")
 	var finishedTask = GlobalData.mistress_task_complete
 	var dialogue_line 
