@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b0ga821xw4fut"
+path="res://.godot/imported/banker_dialogue.dialogue-8504ce0cd299c144c9da3fdf3fc41cfd.tres"
+
+[deps]
+
+source_file="res://Dialogue/banker_dialogue.dialogue"
+dest_files=["res://.godot/imported/banker_dialogue.dialogue-8504ce0cd299c144c9da3fdf3fc41cfd.tres"]
+
+[params]
+
+defaults=true

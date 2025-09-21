@@ -1,0 +1,22 @@
+~ start
+Blacksmith: A stranger, huh? Pleasure to meet ya. 
+Blacksmith: I, uh, ain’t much for good company. 
+Blacksmith: You’ll get better luck with my lady over in the saloon. 
+Blacksmith: … I’m the Blacksmith, by the way. If you couldn’t tell. 
+
+=> END
+
+~ random
+%
+	Blacksmith: You gone to see my lady yet? 
+	Blacksmith: She’s always fussin’ over that saloon. 
+	Blacksmith: Silly thing to fuss over, but I s’pose it keeps morale up for the townsfolk. 
+	Blacksmith: Ain’t she a sweetie for doing that? 
+%
+
+%
+	Blacksmith: Ah, you’re uh, still here… 
+	Blacksmith: Well, um… 
+	Blacksmith: I ought to get back to my work. 
+%
+=> END

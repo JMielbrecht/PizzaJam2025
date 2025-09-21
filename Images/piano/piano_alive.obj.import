@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://blomy4yjvockj"
+path="res://.godot/imported/piano_alive.obj-1e701e216bf76cb7f885befa151cb41d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/piano_alive.obj-1e701e216bf76cb7f885befa151cb41d.mesh"]
+
+source_file="res://Images/piano/piano_alive.obj"
+dest_files=["res://.godot/imported/piano_alive.obj-1e701e216bf76cb7f885befa151cb41d.mesh", "res://.godot/imported/piano_alive.obj-1e701e216bf76cb7f885befa151cb41d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

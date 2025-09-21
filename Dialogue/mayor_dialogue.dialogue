@@ -1,6 +1,42 @@
 ~ start
-Mayor: <greeting>
-Mayor: <Complaint about plant not getting enough light>
+Mayor: Why, hello there! 
+Mayor: It’s so good to see a new face here in Dead Gulch. 
+Mayor: Though, I certainly wish it could be under better circumstances…
+Mayor: Not much that can be done worrying ourselves up in knots! 
+Mayor: Oh, but look at me ramblin’! Let me introduce myself, I’m the Mayor of Dead Gulch. Let me know if there’s anything you need. 
+=> END
+~ in_between
+%
+	Mayor: Ah, you’ve caught me staring. 
+	Mayor: Well, you see, we had to reinforce some of our buildings, on behalf of the outlaws.
+	Mayor: And, well, I’m ‘fraid my window’s been covered up and my sweet orchid can’t get any light… 
+%
+%
+	Mayor: I don’t suppose you have a hammer and ladder to get up there? 
+	Mayor: Haha, oh me… What am I sayin’. ‘Course you don’t. 
+%
+%
+	Mayor: Did you know there are around twenty-eight thousand species of orchid? Ain’t that just neat… 
+	Mayor: Please try not to hurt my plant. 
+	Mayor: I am the mayor, afterall. Hehe. 
+%
+=> END
+
 ~ after_help
-	Mayor: <gratitude for helping out, maybe something else>
+Mayor: Oh my! Look at my darlin’ back in the moonlight! 
+Mayor: You are quite the shot! 
+Mayor: While I can’t be supportin’ gunplay in my town square… I ‘spose I owe you my thanks, nonetheless. 
+
+=> END
+
+~ complete_pool
+% Mayor: Oh, why, look at her thrivin’. What a sight! 
+%
+	Mayor: It’s mighty kind of you to be helpin’ ‘round town. Consider yourself in good standing with the mayor.
+	Mayor: I’m sure there are a few other folk who’d love your help! 
+%
+%
+	Mayor: Try to keep the damages to a minimum, if you could be kind.
+	Mayor: Did you know that vanilla comes from a kind of orchid?
+%
 => END

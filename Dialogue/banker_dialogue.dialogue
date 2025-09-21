@@ -1,0 +1,29 @@
+~ start
+Banker: Why hello there! 
+Banker: Would you like to withdraw or deposit funds today?
+Banker: Or perhaps you’d like to invest in gold? That’s really the best way to protect your funds, y’know. We have fair conversion rates!
+Banker: Oh- I’m sorry, I got ahead of myself. It’s just that…not many folks are interested in “boring” stuff like banking. Thanks for stopping in, friend!
+
+~ random
+%
+	Banker: I had the darndest dream ‘bout banking last night.
+	Banker: Everyone was talkin’ ‘bout “credit cards” and “bit-coins”. 
+	Banker: Ha! 
+	Banker: How does my noggin come up with such things?
+%
+
+%
+	Banker: Wanna hear a knee-slapper?
+	Banker: What do ya call it when a ghost robs a bank?
+	Banker: A polterheist!
+	Banker: Ha ha… ha…. But really. We got this outlaw ‘round these parts who keeps robbin’ us. 
+	Banker: Folks say his name is Johnny Salami and he’s got a Salty Crew doin’ his dirty work.
+	Banker: They aint too polter-nice. 
+%
+
+%
+	Banker: The missus made me a casserole for lunch today. 
+	Banker: All the riches in this here bank’s vault could never replace her. 
+	Banker: Shucks, friend- you caught me blushin’. 
+%
+=> END

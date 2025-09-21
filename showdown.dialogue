@@ -1,0 +1,18 @@
+~ start
+Salty Gang Goon 1: I LOVE causing mischief!!!!!!
+Salty Gang Goon 1: Eat this!!!
+Salty Gang Goon 1: The only thing strong enough to take US down is perhaps a large piano falling from a great height.
+Salty Gang Goon 2: …
+Salty Gang Goon 2: …
+Johnny Salami: Well if there aint a new deputy in town…
+Johnny Salami: I ain’t gon’ go down ta someone uglier than a mud fence like you!
+Johnny Salami: I’m tha one that runs this town!
+Johnny Salami: Maybe if’n they had therapy in tha Wild West I wouldn’ need ta take out my anger like this.
+=> END
+~ after_fight
+Johnny Salami: Oh boy… That one was a whopper….
+Johnny Salami: Say hi ta ‘Mily fer me.
+
+
+
+=> END

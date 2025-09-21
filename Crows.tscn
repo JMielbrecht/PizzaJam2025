@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://r7solpbmagx8"]
+[gd_scene load_steps=3 format=3 uid="uid://r7solpbmagx8"]
 
-[node name="Crows" type="Node3D"]
+[ext_resource type="Script" uid="uid://dcsf2exbbnp8j" path="res://crows.gd" id="1_dmq8t"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_dmq8t"]
+
+[node name="Crows" type="Marker3D"]
+script = ExtResource("1_dmq8t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PrismMesh_dmq8t")

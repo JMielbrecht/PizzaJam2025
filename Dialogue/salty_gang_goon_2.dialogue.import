@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b02uu0a5dsikw"
+path="res://.godot/imported/salty_gang_goon_2.dialogue-efa86fdc409ea92276b1c7dd5d6121d4.tres"
+
+[deps]
+
+source_file="res://Dialogue/salty_gang_goon_2.dialogue"
+dest_files=["res://.godot/imported/salty_gang_goon_2.dialogue-efa86fdc409ea92276b1c7dd5d6121d4.tres"]
+
+[params]
+
+defaults=true

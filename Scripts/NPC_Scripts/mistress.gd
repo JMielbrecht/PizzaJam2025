@@ -1,14 +1,30 @@
 extends Sprite3D
 
+var has_interacted: bool
+var count: float
+
+
+func _ready():
+	has_interacted = false
+
 func start_dialog():
-	print("Mistress talking")
+	if (DialogueManager.dialogue_started):
+		GlobalData.talking_to_npc = true
+
 	var resource = load("res://Dialogue/mistress_dialogue.dialogue")
-	var finishedTask = $GlobalData.mistress_task_complete
+	var finishedTask = GlobalData.mistress_task_complete
 	var dialogue_line 
+	var section = ""
 	if (finishedTask):
-		dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "after_help")
+		print("Talking after help")
+		section = "after_help"
+	elif (has_interacted):
+		print("interlude")
+		section = "in_between"
 	else:
-		dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
+		print("Talking before help")
+		section = "start"
+		has_interacted = true
 	
 	# then
-	
+	DialogueManager.show_dialogue_balloon(resource, section)

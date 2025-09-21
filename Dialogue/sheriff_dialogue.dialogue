@@ -1,0 +1,50 @@
+~ start
+Sheriff: Good golly…
+Sheriff: I’m neck deep in hellabaloo trying to keep this town together, and now I’ve got ANOTHER person to take care of?!
+Sheriff: I’m sorry… that wasn’t very sheriff-ly of me.
+Sheriff: It’s just that with Johnny Salami and his Salty Gang terrorizing the town every night I've been getting wrung through the wringer. 
+Sheriff: But look at me! How am I supposed to stop them!
+=> END
+
+~ in_between
+%
+	Sheriff: Every night Johnny Salami and his Salty Gang raid the town and cause a lot o’ trouble.
+	Sheriff: I tried to stop him but I’ve never been too good with shooters.
+	Sheriff: Best I can do is to set a curfew: get inside before high moon!
+%
+
+%
+	Sheriff: I tried to help Miss Emily with that ol’ piano.
+	Sheriff: Just my luck I pulled a hamstring on my first push.
+%
+
+%
+	Sheriff: When I was a boy I brought a dime novel into the School Marm’s class…
+	Sheriff: She left a bump on my head taller than a pile o’ beans!
+%
+
+%
+	Sheriff: I only met the Undertaker once… and I wasn’t in the sorts to do much talking with him.
+	Sheriff: But golly, he is the most curmudgeonly fellow I’ve ever met.
+%
+
+%
+	Sheriff: The Mayor’s a real nice gal. Gosh, she’s the only reason I got this job in the first place now that I think about it.
+%
+
+%
+	Sheriff: Every mornin’ I gotta set the town square straight after that…
+	Sheriff: and pardon my french here,
+	Sheriff: after that JERK Johnny leaves. 
+	Sheriff: …Excuse my language.
+%
+=> END
+~ after_help
+The Sheriff: Howdy partner.
+The Sheriff: I’ve been eyeing you helping out the townsfolk here. That’s mighty kind of you.
+The Sheriff: And WOWEE the way you handle that six shooter is top-ace.
+The Sheriff: Gosh, it’s hard to say but I was wonderin’ if you would help out the town with just one more thing.
+The Sheriff: I’ve tried my darndest, but I just cannot put an end to Johnny Salami and doggone it I need help.
+The Sheriff: We could set you up right in the middle of town, so when the Salty Gang comes in you can be all ready for them.
+The Sheriff: What do you say?
+=> END

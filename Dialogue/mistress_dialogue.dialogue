@@ -1,6 +1,41 @@
 ~ start
-Mistress: <greeting>
-Mistress: <Complaint about lack of atmosphere>
+Emily Salami: Don’t bother goin’ inta tha saloon…
+Emily Salami: We’re closed.  On account o’ this here piano. 
+Emily Salami: Been trying ta move it fer months now, but even that miner with tha big ol’ muscles can only move her a chuck on a good day.
+=> END
+
+
+~ in_between
+%
+	Emily Salami: My gal was an ace-high pianist when she were alive.
+	Emily Salami: Really, she was real magical with those keys. 
+	Emily Salami: But since she can’t play no more, tha sight o’ tha piano makes her sad.
+#	=> END
+%
+
+%
+	Emily Salami: My brother Johnny’s been tearin’ Dead Gulch all ta pieces. 
+	Emily Salami: I tried talkin’ ta him, but he just won’t listen.
+#	=> END
+%
+
+%
+	Emily Salami: I just can’t bear ta get rid o’ such a nice piano.
+	Emily Salami: That’s why I thought up the idea ta move it upstairs... 
+	Emily Salami: I don’t know what I was thinkin’... 
+	Emily Salami: How’s a bunch o’ Ghosts gonin’ ta pull a piano upstairs.
+#	=> END
+%
+
+%
+	Emily Salami: Tha nightlife in this Town’s been so dead, it makes tha ol’ school marm look like a spring chicken.
+	Emily Salami: HA!
+#    => END
+%
+=> END!
+
 ~ after_help
-	Mistress: <gratitude for helping out, maybe something else>
+Emily Salami: Now ain’t that just somethin’
+Emily Salami: A GHOST piano!
+Emily Salami: Tell ya what, Ducky, ya get a drink on tha house when we open back up. 
 => END

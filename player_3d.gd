@@ -8,7 +8,6 @@ extends CharacterBody3D
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
-@onready var ray_cast_3d = $RayCast3D
 
 @export var HUD : Control
 
@@ -23,27 +22,34 @@ var rotation_input : float
 var tilt_input : float
 var player_rotation : Vector3
 var camera_rotation : Vector3
+@export var current_interactable: Node = null
+
 
 var chamber: int = 6
 @onready var chamber_label = HUD.get_node("ChamberCount")
+@onready var interact_label = HUD.get_node("InteractionLabel")
+@onready var reload_label = HUD.get_node("Reload")
 
 var can_move : bool = true
 
 func _unhandled_input(event):
 	mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
-	
+
+	if current_interactable:
+		interact_label.text = "Press E to Interact"
+		interact_label.visible = true
+		# Show HUD or 3D prompt
+		#current_interactable.show_interact_prompt()
+	else:
+		interact_label.visible = false
+		
 	if mouse_input:
 		rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		tilt_input = -event.relative.y * MOUSE_SENSITIVITY
 		
-	elif event.is_action_pressed("ui_interact"):
-		# This is just a test. Press "E" anywhere.
-		print("Mistress talking")
-		var resource = load("res://Dialogue/mistress_dialogue.dialogue")
-		var dialogue_line = await DialogueManager.get_next_dialogue_line(resource, "start")
-		DialogueManager.show_dialogue_balloon(resource)
-		
-	
+	elif Input.is_action_just_pressed("ui_interact"):
+		if current_interactable:
+			current_interactable.start_dialog()
 
 func _update_camera(delta):
 	
@@ -56,13 +62,6 @@ func _update_camera(delta):
 	
 	CAMERA_CONTROLLER.transform.basis = Basis.from_euler(camera_rotation)
 	CAMERA_CONTROLLER.rotation.z = 0.0
-	# Turn raycast towards movement direction
-	if $RayCast3D:
-		var camera_global_transform = CAMERA_CONTROLLER.global_transform
-		var raycast_origin = camera_global_transform.origin
-		var raycast_target = raycast_origin + camera_global_transform.basis.z * -2.0 # forward in -Z
-		$RayCast3D.global_position = raycast_origin
-		$RayCast3D.target_position = raycast_target - raycast_origin  # Set local target direction
 	
 	global_transform.basis = Basis.from_euler(player_rotation)
 	
@@ -102,9 +101,10 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	
 	if chamber > 0:
-		if Input.is_action_just_pressed("shoot"):
+		reload_label.text = ""
+		if Input.is_action_just_pressed("shoot") && GlobalData.talking_to_npc == false:
+			print("Talking to NPC?", GlobalData.talking_to_npc)
 			var inst = bullet_inst.instantiate()
 			inst.position = bullet_spawn_pos.global_position
 			inst.transform.basis = bullet_spawn_pos.global_transform.basis
@@ -113,12 +113,10 @@ func _physics_process(delta):
 			chamber -= 1
 			chamber_label.text = str(chamber)
 	
-	else:
-		if Input.is_action_just_pressed("reload"):
-			chamber = 6
-			chamber_label.text = str(chamber)
-	
-	
+	if Input.is_action_just_pressed("reload"):
+		chamber = 6
+		chamber_label.text = str(chamber)
+		reload_label.text = "Press R to Reload..."
 	
 	
 	if Input.is_action_pressed("sprint"):

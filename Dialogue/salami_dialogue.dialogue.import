@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bta58igfyiixh"
+path="res://.godot/imported/salami_dialogue.dialogue-af997cc174aa525e89c2c7cc6a9bf834.tres"
+
+[deps]
+
+source_file="res://Dialogue/salami_dialogue.dialogue"
+dest_files=["res://.godot/imported/salami_dialogue.dialogue-af997cc174aa525e89c2c7cc6a9bf834.tres"]
+
+[params]
+
+defaults=true
