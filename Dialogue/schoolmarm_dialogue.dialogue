@@ -1,0 +1,33 @@
+~ start
+School Marm: I’ll be honest, Dear.
+School Marm: I’d rather be reading right now. 
+School Marm: But that’s a luxury of the living. These ghostly fingers can’t lift a single page.
+=> END!
+
+~ in_between
+%
+	School Marm: The Salami siblings were pupils of mine, back in the day.
+	School Marm: They were always getting into trouble. Seems to have carried on with Johnny into ghost-hood.
+%
+
+%
+	School Marm: If I’d have known I’d have to spend eternity in Dead Gulch…
+	School Marm: I’d have at least finished my book. 
+%
+
+%
+	School Marm: Listen, Dear. 
+	School Marm: I don’t want to be rude, but if I must stand here and brood over my unfinished book…
+	School Marm: I’d rather do it in silence.
+%
+~ after_help
+	School Marm: Well. That’s one way to finish a book.
+	School Marm: I suppose I didn’t need to know the ending anyway.
+	School Marm: * Sigh *
+	
+~ complete_pool
+	School Marm: That little Undertaker keeps coming by to bother me.
+	School Marm: Doesn’t he know I’m not going to die anytime soon!
+
+
+=> END

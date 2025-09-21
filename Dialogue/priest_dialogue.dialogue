@@ -1,6 +1,0 @@
-~ start
-Priest: <greeting>
-Priest: <Complaint about being stuck on same page for years>
-~ after_help
-	Priest: <gratitude for helping out, maybe something else>
-=> END

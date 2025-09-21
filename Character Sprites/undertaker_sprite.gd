@@ -2,8 +2,8 @@ extends Sprite3D
 
 func start_dialog():
 	print("Farmer talking")
-	var resource = load("res://Dialogue/farmer_dialogue.dialogue")
-	var finishedTask = GlobalData.farmer_task_complete
+	var resource = load("res://Dialogue/undertaker_dialogue.dialogue")
+	var finishedTask = GlobalData.undertaker_task_complete
 	var dialogue_line 
 	if (finishedTask):
 		print("Talking after help")

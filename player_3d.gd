@@ -33,8 +33,7 @@ var can_move : bool = true
 
 func _unhandled_input(event):
 	mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
-	print("current interactable")
-	print(current_interactable)
+
 	if current_interactable:
 		interact_label.text = "Press E to Interact"
 		interact_label.visible = true

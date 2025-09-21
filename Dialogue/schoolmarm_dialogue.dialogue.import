@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dwk80khjpfo2f"
+path="res://.godot/imported/schoolmarm_dialogue.dialogue-f102303e4781e050e9f838c8ebda8d47.tres"
+
+[deps]
+
+source_file="res://Dialogue/schoolmarm_dialogue.dialogue"
+dest_files=["res://.godot/imported/schoolmarm_dialogue.dialogue-f102303e4781e050e9f838c8ebda8d47.tres"]
+
+[params]
+
+defaults=true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c0wn64b4t6kfn"]
+[gd_scene load_steps=55 format=3 uid="uid://c0wn64b4t6kfn"]
 
 [ext_resource type="Texture2D" uid="uid://vedsxdj6pbpo" path="res://Images/checkerboard.png" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://bwn5xqvs61so8" path="res://Player3D.tscn" id="1_c6gwx"]
@@ -18,7 +18,21 @@
 [ext_resource type="ArrayMesh" uid="uid://8wkyd31vtxo5" path="res://Images/Cactus.obj" id="14_ee7l0"]
 [ext_resource type="AudioStream" uid="uid://cwjpcld363g2x" path="res://Audio/western theme.wav" id="15_gn8l5"]
 [ext_resource type="ArrayMesh" uid="uid://cujtnd4oyl60i" path="res://Images/general_good.obj" id="18_cvq6i"]
+[ext_resource type="Script" uid="uid://b38pupy5b1t7f" path="res://Scripts/NPC_Scripts/mistress.gd" id="19_0to5b"]
 [ext_resource type="Texture2D" uid="uid://bps0l71x8akf4" path="res://Images/gen goods/gen_tex.png" id="19_6tx0c"]
+[ext_resource type="Script" uid="uid://bgutijjkqikhr" path="res://Scripts/NPC_Scripts/farmer.gd" id="21_5j71u"]
+[ext_resource type="Script" uid="uid://b5wb5gnw6fvi1" path="res://Scripts/NPC_Scripts/npc.gd" id="21_jyqkj"]
+[ext_resource type="Texture2D" uid="uid://py6vdfspx4ov" path="res://Character Sprites/Farmer.PNG" id="22_c2gv2"]
+[ext_resource type="Texture2D" uid="uid://bo632vycu4pot" path="res://Character Sprites/Undertaker.PNG" id="24_rp4qs"]
+[ext_resource type="Script" uid="uid://bchdrk5lqv12m" path="res://Character Sprites/undertaker_sprite.gd" id="25_gtthi"]
+[ext_resource type="Texture2D" uid="uid://1tl57v47ultx" path="res://Character Sprites/Mayor.PNG" id="25_rhl3w"]
+[ext_resource type="Texture2D" uid="uid://xhg3sb757a08" path="res://Character Sprites/Sheriff.PNG" id="26_bun23"]
+[ext_resource type="Texture2D" uid="uid://bbcs5pcthq1v2" path="res://Character Sprites/School Marm.PNG" id="27_gtthi"]
+[ext_resource type="Script" uid="uid://ba0pmnrlbtdcg" path="res://Character Sprites/mayor_sprite.gd" id="27_mnkyj"]
+[ext_resource type="Script" uid="uid://dmp7bte11wluy" path="res://Scripts/NPC_Scripts/sheriff.gd" id="29_mnkyj"]
+[ext_resource type="Script" uid="uid://bm3mkqrjsbnj" path="res://Scripts/NPC_Scripts/schoolmarm.gd" id="30_gtthi"]
+[ext_resource type="Script" uid="uid://bg6xpidakdqgf" path="res://Scripts/NPC_Scripts/salami_sprite.gd" id="31_6xgc5"]
+[ext_resource type="Texture2D" uid="uid://devgugqs2rrqe" path="res://Character Sprites/Johnny Salami.PNG" id="32_fif40"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c6gwx"]
 
@@ -790,10 +804,13 @@ surface_material_override/9 = SubResource("StandardMaterial3D_jyqkj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.7974, 0, 0)
 
 [node name="Miss_Lady" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.1436, 0, 10.5061)
+script = ExtResource("21_jyqkj")
 
 [node name="Ms Lady" type="Sprite3D" parent="NPCs/Miss_Lady"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
 texture = ExtResource("3_bcbcq")
+script = ExtResource("19_0to5b")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Miss_Lady"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
@@ -803,10 +820,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
 [node name="Farmer" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4839, 0.603877, 16.8339)
+script = ExtResource("21_jyqkj")
 
-[node name="Ms Lady" type="Sprite3D" parent="NPCs/Farmer"]
+[node name="Farmer Sprite" type="Sprite3D" parent="NPCs/Farmer"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("3_bcbcq")
+texture = ExtResource("22_c2gv2")
+script = ExtResource("21_5j71u")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Farmer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
@@ -816,10 +836,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
 [node name="Undertaker" type="Node3D" parent="NPCs"]
+script = ExtResource("21_jyqkj")
 
-[node name="Ms Lady" type="Sprite3D" parent="NPCs/Undertaker"]
+[node name="Undertaker Sprite" type="Sprite3D" parent="NPCs/Undertaker"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("3_bcbcq")
+texture = ExtResource("24_rp4qs")
+script = ExtResource("25_gtthi")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Undertaker"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
@@ -829,10 +851,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
 [node name="Mayor" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.564)
+script = ExtResource("21_jyqkj")
 
-[node name="Ms Lady" type="Sprite3D" parent="NPCs/Mayor"]
+[node name="Mayor Sprite" type="Sprite3D" parent="NPCs/Mayor"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("3_bcbcq")
+texture = ExtResource("25_rhl3w")
+script = ExtResource("27_mnkyj")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Mayor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
@@ -842,14 +867,49 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
 
 [node name="Sheriff" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, 8.33552)
+script = ExtResource("21_jyqkj")
 
-[node name="Ms Lady" type="Sprite3D" parent="NPCs/Sheriff"]
+[node name="Sheriff Sprite" type="Sprite3D" parent="NPCs/Sheriff"]
 transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
-texture = ExtResource("3_bcbcq")
+texture = ExtResource("26_bun23")
+script = ExtResource("29_mnkyj")
 
 [node name="Area3D" type="Area3D" parent="NPCs/Sheriff"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Sheriff/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
+shape = SubResource("CylinderShape3D_cvq6i")
+
+[node name="Schoolmarm" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, 8.33552)
+script = ExtResource("21_jyqkj")
+
+[node name="Schoolmarm Sprite" type="Sprite3D" parent="NPCs/Schoolmarm"]
+transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
+texture = ExtResource("27_gtthi")
+script = ExtResource("30_gtthi")
+
+[node name="Area3D" type="Area3D" parent="NPCs/Schoolmarm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/Schoolmarm/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
+shape = SubResource("CylinderShape3D_cvq6i")
+
+[node name="JohnnySalami" type="Node3D" parent="NPCs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23293, 0, 8.33552)
+script = ExtResource("21_jyqkj")
+
+[node name="Salami Sprite" type="Sprite3D" parent="NPCs/JohnnySalami"]
+transform = Transform3D(0.058023, 0, -0.12354, 0, 0.136487, 0, 0.12354, 0, 0.058023, 24.0585, 1.43761, -9.33047)
+texture = ExtResource("32_fif40")
+script = ExtResource("31_6xgc5")
+
+[node name="Area3D" type="Area3D" parent="NPCs/JohnnySalami"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7052, 0, -9.72901)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCs/JohnnySalami/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65808, 0.330104)
 shape = SubResource("CylinderShape3D_cvq6i")
